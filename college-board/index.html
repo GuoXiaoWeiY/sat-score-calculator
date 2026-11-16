@@ -1,1 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SAT Score Calculator &amp; College Board Tables</title>
+<meta name="description" content="Estimate your Digital SAT score using College Board practice-test score tables. Enter correct answers for Reading &amp; Writing and Math to get a 400-1600 estimate. Free.">
+<link rel="canonical" href="https://guoxiaoweiy.github.io/sat-score-calculator/college-board/">
+<meta name="robots" content="index,follow">
+<meta property="og:title" content="SAT Score Calculator &amp; College Board Tables">
+<meta property="og:description" content="Estimate your Digital SAT score using College Board practice-test score tables. Enter correct answers for Reading &amp; Writing and Math to get a 400-1600 estimate. Free.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://guoxiaoweiy.github.io/sat-score-calculator/college-board/">
+<!-- ===== Google Analytics 4 (已启用 2026-11-16) ===== -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-688XJLV7K0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-688XJLV7K0');
+</script>
+<!-- ===== PVUV.ai 真人流量统计 (已启用 2026-11-16, site gVztrYuC) ===== -->
+<script defer src="https://www.pvuv.ai/f.js" data-site="gVztrYuC" data-api="https://in.pvuv.ai"></script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "SAT Score Calculator & College Board Score Tables",
+  "applicationCategory": "EducationalApplication",
+  "operatingSystem": "Any",
+  "url": "https://guoxiaoweiy.github.io/sat-score-calculator/college-board/",
+  "description": "Estimate your Digital SAT score using College Board practice-test score tables. Enter correct answers for Reading & Writing and Math to get a 400-1600 estimate. Free.",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "provider": {
+    "@type": "Organization",
+    "name": "SAT Score Calculator"
+  }
+}</script>
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is this calculator affiliated with College Board?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. This is an independent estimating tool built from publicly available practice-test score ranges. It is not affiliated with, endorsed by, or officially connected to College Board. Only College Board can issue an official SAT score."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use College Board score tables to predict my score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, approximately. The tables published with official practice tests map raw correct-answer counts to scaled scores for a specific form. Our calculator smooths those published ranges into one estimator, so it is close but not exact."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does College Board penalize wrong answers on the Digital SAT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The Digital SAT removed the wrong-answer penalty. Only correct answers earn points, so guessing is never worse than leaving a question blank."
+      }
+    }
+  ]
+}</script>
+<style>
+  :root{--ink:#16233b;--sub:#5b6b82;--line:#e3e9f2;--brand:#2f6df6;--brand-d:#1d4fd0;--bg:#f5f8ff;--card:#fff;--ok:#0a9150}
+  *{box-sizing:border-box}
+  body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
+  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+  header{padding:20px 0;border-bottom:1px solid var(--line)}
+  .brand{font-weight:800;font-size:19px;letter-spacing:-.3px}
+  .brand span{color:var(--brand)}
+  h1{font-size:2.1rem;line-height:1.15;margin:34px 0 8px;letter-spacing:-.8px}
+  .lede{color:var(--sub);font-size:1.12rem;margin:0 0 26px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 30px rgba(31,72,150,.07);margin-bottom:26px}
+  fieldset{border:0;margin:0 0 18px;padding:0}
+  legend{font-weight:700;font-size:1.06rem;margin-bottom:10px}
+  .mods{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  label{display:block;font-size:.9rem;color:var(--sub);margin-bottom:5px}
+  input[type=number]{width:100%;padding:12px 14px;font-size:1.15rem;border:1px solid var(--line);border-radius:10px;color:var(--ink);background:#fff}
+  input[type=number]:focus{outline:2px solid var(--brand);border-color:var(--brand)}
+  button{width:100%;padding:15px;font-size:1.1rem;font-weight:700;color:#fff;background:var(--brand);border:0;border-radius:11px;cursor:pointer;margin-top:6px}
+  button:hover{background:var(--brand-d)}
+  .result{display:none;margin-top:22px;text-align:center;border-top:1px dashed var(--line);padding-top:22px}
+  .total{font-size:3.2rem;font-weight:800;line-height:1;color:var(--brand)}
+  .total small{font-size:1.1rem;font-weight:600;color:var(--sub)}
+  .breakdown{display:flex;justify-content:center;gap:28px;margin-top:14px;color:var(--sub)}
+  .breakdown b{display:block;color:var(--ink);font-size:1.35rem}
+  .note{font-size:.82rem;color:var(--sub);margin-top:16px}
+  .example-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
+  .example-table th,.example-table td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  .example-table th{background:var(--bg);font-weight:600}
+  section ol{margin:10px 0;padding-left:22px}
+  section ol li{margin:6px 0}
+  h2{font-size:1.45rem;letter-spacing:-.3px;margin:34px 0 12px}
+  h3{font-size:1.1rem;margin:22px 0 6px}
+  p,li{color:#33415a}
+  .faq details{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff}
+  .faq summary{padding:14px 16px;font-weight:600;cursor:pointer}
+  .faq details p{padding:0 16px 14px;margin:0}
+  footer{border-top:1px solid var(--line);padding:24px 0 46px;color:var(--sub);font-size:.9rem;margin-top:40px}
+  footer a{color:var(--brand);text-decoration:none;margin-right:16px}
+  @media(max-width:520px){h1{font-size:1.75rem}.mods{grid-template-columns:1fr}.total{font-size:2.7rem}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="brand"><a href="/sat-score-calculator/" style="color:var(--ink);text-decoration:none">SAT <span>Score Calculator</span></a></div>
+  <nav><a href="/sat-score-calculator/">Home</a> · <a href="/sat-score-calculator/#how">How it works</a> · <a href="/sat-score-calculator/#accuracy">Accuracy</a></nav>
+</header>
+<main>
+  <h1>SAT Score Calculator &amp; College Board Score Tables</h1>
+  <p class="lede">Understand how College Board scores the Digital SAT — and estimate your own score for free. Enter your module correct-answer counts to see an estimated 200–800 section score and 400–1600 total.</p>
+  <section class="card" aria-label="SAT score calculator tool">
+      <form id="calcForm" onsubmit="return false;">
+        <fieldset>
+          <legend>Reading &amp; Writing</legend>
+          <p class="note" style="margin-top:0">Enter the number of questions you got right in each module (0–27).</p>
+          <div class="mods">
+            <div><label for="rw1">Module 1 correct</label><input type="number" id="rw1" min="0" max="27" value="18" inputmode="numeric"></div>
+            <div><label for="rw2">Module 2 correct</label><input type="number" id="rw2" min="0" max="27" value="19" inputmode="numeric"></div>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Math</legend>
+          <p class="note" style="margin-top:0">Enter the number of questions you got right in each module (0–22).</p>
+          <div class="mods">
+            <div><label for="m1">Module 1 correct</label><input type="number" id="m1" min="0" max="22" value="15" inputmode="numeric"></div>
+            <div><label for="m2">Module 2 correct</label><input type="number" id="m2" min="0" max="22" value="16" inputmode="numeric"></div>
+          </div>
+        </fieldset>
+        <button type="button" onclick="calculate()">Calculate My Score</button>
+      </form>
 
+      <div class="result" id="result" role="status" aria-live="polite">
+        <div class="total"><span id="totalScore">0</span> <small>/ 1600</small></div>
+        <div class="breakdown">
+          <div>Reading &amp; Writing <b id="rwScore">0</b></div>
+          <div>Math <b id="mScore">0</b></div>
+        </div>
+        <p class="note">Estimated score. Only College Board can issue an official score. <a href="#accuracy" style="color:var(--brand)">How accurate is this?</a></p>
+      </div>
+    </section>
+  <section>
+    <p>College Board is the only organization that can issue an official SAT score. This page is an independent estimator built from score tables found in publicly available official practice tests. It is not affiliated with or endorsed by College Board. Use it to understand the scoring process and track practice progress.</p>
+    <h2>How College Board scores the Digital SAT</h2>
+      <p>College Board converts your raw score (number of correct answers) into a scaled score between 200 and 800 for each section, then adds them for a total of 400 to 1600. The conversion uses a process called equating, which adjusts for small difficulty differences between test forms. On the Digital SAT, modules are adaptive: your Module 1 result determines the difficulty of Module 2, and harder modules can produce different scaled scores for the same raw count.</p>
+
+      <h2>Using official practice-test score tables</h2>
+      <p>The score tables released with College Board practice tests (on Bluebook) show the raw-to-scaled conversion for a specific form. Our calculator uses a smooth approximation of the ranges seen across those published tables, with linear interpolation between points. That makes it a useful planning tool, but not a substitute for the exact score report from your test.</p>
+
+      <h2>Why your estimate may differ from the official score</h2>
+      <p>Three factors cause differences: (1) adaptive module routing — we cannot know which module difficulty you received; (2) equating — College Board adjusts scores per test form; (3) unscored pretest questions mixed into each module. Expect a possible gap of roughly 30–60 points from your official result.</p>
+  </section>
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <details open><summary>Is this calculator affiliated with College Board?</summary><p>No. This is an independent estimating tool built from publicly available practice-test score ranges. It is not affiliated with, endorsed by, or officially connected to College Board. Only College Board can issue an official SAT score.</p></details>
+      <details><summary>Can I use College Board score tables to predict my score?</summary><p>Yes, approximately. The tables published with official practice tests map raw correct-answer counts to scaled scores for a specific form. Our calculator smooths those published ranges into one estimator, so it is close but not exact.</p></details>
+      <details><summary>Does College Board penalize wrong answers on the Digital SAT?</summary><p>No. The Digital SAT removed the wrong-answer penalty. Only correct answers earn points, so guessing is never worse than leaving a question blank.</p></details>
+  </section>
+  <section>
+    <p><a href="/sat-score-calculator/" style="color:var(--brand)">← Back to the main SAT Score Calculator</a></p>
+  </section>
+</main>
+<footer>
+    <div>© <span id="yr">2026</span> SAT Score Calculator. An independent estimating tool, not affiliated with College Board.</div>
+    <div style="margin-top:10px">
+      <a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+    </div>
+  </footer>
+</div>
+<script>
+// ===== 估分逻辑：分段线性映射，正确率 -> 200-800。数值取自公开练习卷的分数区间近似。 =====
+var CURVE = [
+  [0.00,200],[0.10,270],[0.20,340],[0.30,410],[0.40,470],[0.50,530],
+  [0.60,590],[0.70,650],[0.80,710],[0.90,770],[1.00,800]
+];
+function clamp(n,lo,hi){return Math.min(hi,Math.max(lo,n));}
+function toScaled(correct,total){
+  var p = total>0 ? clamp(correct/total,0,1) : 0;
+  for(var i=1;i<CURVE.length;i++){
+    if(p<=CURVE[i][0]){
+      var x0=CURVE[i-1][0],y0=CURVE[i-1][1],x1=CURVE[i][0],y1=CURVE[i][1];
+      var v=y0+(y1-y0)*(p-x0)/(x1-x0);
+      return Math.round(v/10)*10; // SAT 分数为 10 的倍数
+    }
+  }
+  return 800;
+}
+function calculate(){
+  var rw1=clamp(parseInt(document.getElementById('rw1').value,10)||0,0,27);
+  var rw2=clamp(parseInt(document.getElementById('rw2').value,10)||0,0,27);
+  var m1=clamp(parseInt(document.getElementById('m1').value,10)||0,0,22);
+  var m2=clamp(parseInt(document.getElementById('m2').value,10)||0,0,22);
+  var rw=toScaled(rw1+rw2,54);
+  var ma=toScaled(m1+m2,44);
+  document.getElementById('rwScore').textContent=rw;
+  document.getElementById('mScore').textContent=ma;
+  document.getElementById('totalScore').textContent=rw+ma;
+  document.getElementById('result').style.display='block';
+}
+document.getElementById('yr').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
