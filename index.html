@@ -74,6 +74,21 @@
           "@type": "Question",
           "name": "Is this SAT score calculator free?",
           "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is completely free, with no sign-up and no limit. There is no email wall and no paywall. You can calculate as many scores as you like." }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I estimate my SAT score from the number of correct answers?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. After a practice test, count how many questions you got right in each module and enter them above. This SAT score estimator converts your correct-answer counts into a scaled estimate out of 1600." }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this calculator support both Module 1 and Module 2?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You enter the correct-answer counts for Module 1 and Module 2 separately in both Reading and Writing and Math, and the calculator combines all four." }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this the same as an official College Board score?",
+          "acceptedAnswer": { "@type": "Answer", "text": "No. Only College Board can issue an official SAT score. This tool is an independent estimator built from publicly available practice-test score ranges and is not affiliated with or endorsed by College Board." }
         }
       ]
     }
@@ -105,6 +120,11 @@
   .breakdown{display:flex;justify-content:center;gap:28px;margin-top:14px;color:var(--sub)}
   .breakdown b{display:block;color:var(--ink);font-size:1.35rem}
   .note{font-size:.82rem;color:var(--sub);margin-top:16px}
+  .example-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
+  .example-table th,.example-table td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  .example-table th{background:var(--bg);font-weight:600}
+  section ol{margin:10px 0;padding-left:22px}
+  section ol li{margin:6px 0}
   h2{font-size:1.45rem;letter-spacing:-.3px;margin:34px 0 12px}
   h3{font-size:1.1rem;margin:22px 0 6px}
   p,li{color:#33415a}
@@ -164,8 +184,30 @@
       <h2 id="how">How is my SAT score calculated?</h2>
       <p>The digital SAT has two sections: Reading &amp; Writing (RW) and Math. Each section is scored from 200 to 800, and the two are added together for your total score of 400 to 1600. Your raw score — the number of correct answers — is converted to a scaled score through a process called equating, which accounts for small differences in difficulty between test forms. There is no penalty for wrong answers on the digital SAT, so guessing is never worse than leaving a question blank.</p>
 
+      <h2 id="methodology">How this calculator works (methodology)</h2>
+      <p>Want to know exactly what happens when you press calculate? Here is the full method, in plain language.</p>
+      <ol>
+        <li><strong>Add your correct answers in each section.</strong> Reading &amp; Writing has two modules of 27 scored questions each (54 total); Math has two modules of 22 scored questions each (44 total).</li>
+        <li><strong>Convert each raw total to the 200–800 scale.</strong> We map your number of correct answers to a scaled section score using a score-conversion table drawn from publicly available official digital SAT practice tests, with linear interpolation between points.</li>
+        <li><strong>Add the two section scores.</strong> Reading &amp; Writing + Math = your estimated total out of 1600, rounded to the nearest 10.</li>
+      </ol>
+      <p><strong>What this model does and does not account for:</strong> it uses the number of correct answers across both modules. It does not simulate the digital SAT's module-level adaptive routing (where your Module 1 performance decides whether you get the easier or harder Module 2), and it cannot account for the difficulty of the specific questions you saw. Because of this, treat the result as a close approximation, not an exact score.</p>
+
+      <h2>Example: estimate a score from correct answers</h2>
+      <p>Here is a complete worked example so you can see what to expect:</p>
+      <table class="example-table">
+        <thead><tr><th>Section</th><th>Module 1</th><th>Module 2</th><th>Section score</th></tr></thead>
+        <tbody>
+          <tr><td>Reading &amp; Writing</td><td>20 / 27</td><td>18 / 27</td><td>650</td></tr>
+          <tr><td>Math</td><td>19 / 22</td><td>17 / 22</td><td>650</td></tr>
+          <tr><td><strong>Estimated total</strong></td><td colspan="2"></td><td><strong>1300</strong></td></tr>
+        </tbody>
+      </table>
+      <p class="note">This is an illustrative example only — it is not a verified official score. Your real result depends on question difficulty and the official scoring process.</p>
+
       <h2 id="accuracy">Is this SAT score calculator accurate?</h2>
-      <p>This tool gives an estimate, not an official score. College Board's equating process can shift scaled scores slightly from one test form to another. Our calculator uses the score ranges found in publicly available official practice tests, which is close enough to guide your study decisions and track progress between practice tests. For an exact score, use the official score report from College Board.</p>
+      <p>This tool gives an estimate, not an official score. College Board uses equating to adjust scores between test forms, and the digital SAT's adaptive modules mean two students with the same number of correct answers can receive slightly different scaled scores depending on question difficulty. Our calculator uses published score ranges from official practice tests, so it is close enough to guide study decisions and track your progress between practice tests — but expect a possible difference of roughly 30–60 points from an official result.</p>
+      <p><strong>Accuracy disclaimer:</strong> This tool provides an estimated Digital SAT score based on your practice-test performance. Actual SAT scores may vary depending on question difficulty, adaptive testing, and the official College Board scoring process. This calculator is not affiliated with, endorsed by, or officially connected to the College Board.</p>
 
       <h2>Is there a guessing penalty?</h2>
       <p>No. The digital SAT removed the old wrong-answer penalty. You earn credit only for correct answers, and wrong or blank answers both score zero. That means you should always answer every question, even when you have to guess.</p>
@@ -184,6 +226,10 @@
       <details><summary>Is this SAT score calculator free?</summary><p>Yes. It is completely free, with no sign-up and no limit. There is no email wall and no paywall.</p></details>
       <details><summary>Can I compare my score across practice tests?</summary><p>Yes. Many students keep a chart of their scores across multiple practice tests to see their trend. Save the result after each test and watch your Reading &amp; Writing and Math scores improve over time.</p></details>
       <details><summary>How many questions are on the digital SAT?</summary><p>The digital SAT has two sections. Reading &amp; Writing has two modules, and Math has two modules. Some questions are unscored pretest questions, so enter your scored correct-answer counts above.</p></details>
+      <details><summary>Can I estimate my SAT score from the number of correct answers?</summary><p>Yes — that is exactly what this SAT score estimator does. After a practice test, count how many questions you got right in each module and enter them above. The tool converts your correct-answer counts into a scaled estimate out of 1600. This is the simplest way to turn a raw practice score into a number you can track.</p></details>
+      <details><summary>How many points is each SAT question worth?</summary><p>There is no fixed point value per question on the digital SAT. Each section is converted from your raw correct-answer count to a 200–800 scaled score, so the value of one question varies depending on where you are on the scale and the difficulty of the test form. Roughly, each correct answer in Reading &amp; Writing is worth around 10–20 scaled points, and in Math around 10–30, but this is only an approximation.</p></details>
+      <details><summary>Does this calculator support both Module 1 and Module 2?</summary><p>Yes. You enter the correct-answer counts for Module 1 and Module 2 separately in both Reading &amp; Writing and Math, and the calculator combines all four. This matches how the digital SAT is structured.</p></details>
+      <details><summary>Is this the same as an official College Board score?</summary><p>No. Only College Board can issue an official SAT score from an actual test. This tool is an independent estimator built from publicly available practice-test score ranges. It is not affiliated with or endorsed by College Board. Use the estimate to guide studying and track progress, not for college applications.</p></details>
     </section>
   </main>
 
