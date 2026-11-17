@@ -3,18 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAT Score Calculator &amp; College Board Tables</title>
-<meta name="description" content="Estimate your Digital SAT score using College Board practice-test score tables. Enter correct answers for Reading &amp; Writing and Math to get a 400-1600 estimate. Free.">
+<title>SAT Score Calculator &amp; College Board Score Tables (2026)</title>
+<meta name="description" content="See how College Board turns raw correct answers into 200–800 section scores, with a raw-to-scaled conversion table and a free Digital SAT score estimator.">
 <link rel="canonical" href="https://satcalcpro.dpdns.org/college-board/">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="SAT Score Calculator &amp; College Board Tables">
-<meta property="og:description" content="Estimate your Digital SAT score using College Board practice-test score tables. Enter correct answers for Reading &amp; Writing and Math to get a 400-1600 estimate. Free.">
+<meta property="og:title" content="SAT Score Calculator &amp; College Board Score Tables (2026)">
+<meta property="og:description" content="See how College Board turns raw correct answers into 200–800 section scores, with a raw-to-scaled conversion table and a free Digital SAT score estimator.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://satcalcpro.dpdns.org/college-board/">
 <meta property="og:image" content="https://satcalcpro.dpdns.org/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
-<!-- ===== Google Analytics 4 (已启用 2026-11-16) ===== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-688XJLV7K0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -22,7 +21,6 @@
   gtag('js', new Date());
   gtag('config', 'G-688XJLV7K0');
 </script>
-<!-- ===== PVUV.ai 真人流量统计 (已启用 2026-11-16, site gVztrYuC) ===== -->
 <script defer src="https://www.pvuv.ai/f.js" data-site="gVztrYuC" data-api="https://in.pvuv.ai"></script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
@@ -69,6 +67,38 @@
         "@type": "Answer",
         "text": "No. The Digital SAT removed the wrong-answer penalty. Only correct answers earn points, so guessing is never worse than leaving a question blank."
       }
+    },
+    {
+      "@type": "Question",
+      "name": "How many questions are on the Digital SAT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Reading and Writing has 54 questions across two 27-question modules; Math has 44 questions across two 22-question modules. Each section is scored out of 800, and the total is out of 1600."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is equating and why does it affect my score?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Equating adjusts the raw-to-scaled conversion so that a given raw score means the same thing on every test date, even when one form is slightly harder than another. That is why the same number of correct answers can produce a slightly different scaled score on two different test dates."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How accurate is a raw-score estimate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually within about 30 to 60 points of the official total. The three sources of error are adaptive module routing, per-form equating, and unscored pretest questions mixed into each module."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why did I get 200 on a section with zero correct answers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because 200 is the floor of the section scale, not zero. The Digital SAT section score range is 200 to 800, so an empty or all-wrong section reports 200 rather than 0."
+      }
     }
   ]
 }</script>
@@ -89,7 +119,8 @@
   .brand{font-weight:800;font-size:19px;letter-spacing:-.3px}
   .brand span{color:var(--brand)}
   h1{font-size:2.1rem;line-height:1.15;margin:34px 0 8px;letter-spacing:-.8px}
-  .lede{color:var(--sub);font-size:1.12rem;margin:0 0 26px}
+  .lede{color:var(--sub);font-size:1.12rem;margin:0 0 20px}
+  .meta{font-size:.84rem;color:var(--sub);margin:0 0 26px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 30px rgba(31,72,150,.07);margin-bottom:26px}
   fieldset{border:0;margin:0 0 18px;padding:0}
   legend{font-weight:700;font-size:1.06rem;margin-bottom:10px}
@@ -108,17 +139,26 @@
   .example-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
   .example-table th,.example-table td{border:1px solid var(--line);padding:8px 10px;text-align:left}
   .example-table th{background:var(--bg);font-weight:600}
+  .example-table td.num{text-align:right;font-variant-numeric:tabular-nums}
+  .tablewrap{overflow-x:auto}
+  .caption{font-size:.84rem;color:var(--sub);margin:8px 0 0}
   section ol{margin:10px 0;padding-left:22px}
   section ol li{margin:6px 0}
   h2{font-size:1.45rem;letter-spacing:-.3px;margin:34px 0 12px}
   h3{font-size:1.1rem;margin:22px 0 6px}
   p,li{color:#33415a}
+  a.txt{color:var(--brand)}
+  .toc{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 22px;margin:0 0 26px}
+  .toc p{margin:0 0 8px;font-weight:700;font-size:.92rem}
+  .toc ol{margin:0;padding-left:20px;font-size:.94rem}
+  .toc a{color:var(--brand);text-decoration:none}
+  .note-box{border-left:3px solid var(--brand);background:#eef4ff;padding:12px 16px;border-radius:0 10px 10px 0;font-size:.94rem;margin:16px 0}
   .faq details{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff}
   .faq summary{padding:14px 16px;font-weight:600;cursor:pointer}
   .faq details p{padding:0 16px 14px;margin:0}
   footer{border-top:1px solid var(--line);padding:24px 0 46px;color:var(--sub);font-size:.9rem;margin-top:40px}
   footer a{color:var(--brand);text-decoration:none;margin-right:16px}
-  @media(max-width:520px){h1{font-size:1.75rem}.mods{grid-template-columns:1fr}.total{font-size:2.7rem}}
+  @media(max-width:520px){h1{font-size:1.75rem}h2{font-size:1.28rem}.mods{grid-template-columns:1fr}.total{font-size:2.7rem}}
 </style>
 </head>
 <body>
@@ -130,6 +170,8 @@
 <main>
   <h1>SAT Score Calculator &amp; College Board Score Tables</h1>
   <p class="lede">Understand how College Board scores the Digital SAT — and estimate your own score for free. Enter your module correct-answer counts to see an estimated 200–800 section score and 400–1600 total.</p>
+  <p class="meta">Updated November 2026 · Independent estimator, not affiliated with College Board</p>
+
   <section class="card" aria-label="SAT score calculator tool">
       <form id="calcForm" onsubmit="return false;">
         <fieldset>
@@ -160,28 +202,113 @@
         <p class="note">Estimated score. Only College Board can issue an official score. <a href="#accuracy" style="color:var(--brand)">How accurate is this?</a></p>
       </div>
     </section>
-  <section>
+
+  <nav class="toc">
+    <p>On this page</p>
+    <ol>
+      <li><a href="#scoring">How College Board scores the Digital SAT</a></li>
+      <li><a href="#table">Raw to scaled score conversion table</a></li>
+      <li><a href="#adaptive">Why Module 1 decides your ceiling</a></li>
+      <li><a href="#equating">Equating, explained without the jargon</a></li>
+      <li><a href="#accuracy">Why your estimate may differ by 30–60 points</a></li>
+      <li><a href="#facts">Scoring facts people get wrong</a></li>
+      <li><a href="#faq">FAQ</a></li>
+    </ol>
+  </nav>
+
+  <section id="scoring">
     <p>College Board is the only organization that can issue an official SAT score. This page is an independent estimator built from score tables found in publicly available official practice tests. It is not affiliated with or endorsed by College Board. Use it to understand the scoring process and track practice progress.</p>
     <h2>How College Board scores the Digital SAT</h2>
-      <p>College Board converts your raw score (number of correct answers) into a scaled score between 200 and 800 for each section, then adds them for a total of 400 to 1600. The conversion uses a process called equating, which adjusts for small difficulty differences between test forms. On the Digital SAT, modules are adaptive: your Module 1 result determines the difficulty of Module 2, and harder modules can produce different scaled scores for the same raw count.</p>
-
-      <h2>Using official practice-test score tables</h2>
-      <p>The score tables released with College Board practice tests (on Bluebook) show the raw-to-scaled conversion for a specific form. Our calculator uses a smooth approximation of the ranges seen across those published tables, with linear interpolation between points. That makes it a useful planning tool, but not a substitute for the exact score report from your test.</p>
-
-      <h2>Why your estimate may differ from the official score</h2>
-      <p>Three factors cause differences: (1) adaptive module routing — we cannot know which module difficulty you received; (2) equating — College Board adjusts scores per test form; (3) unscored pretest questions mixed into each module. Expect a possible gap of roughly 30–60 points from your official result.</p>
+      <p>The Digital SAT has two sections, each worth 800 points, for a 400–1600 total. Reading &amp; Writing is 54 questions split into two 27-question modules. Math is 44 questions split into two 22-question modules. Both are taken on Bluebook, the digital testing app.</p>
+      <p>Inside each section, College Board converts your raw score — the count of correct answers — into a scaled score between 200 and 800. Two things happen during that conversion. First, the test is <b>adaptive</b>: your performance on Module 1 determines whether Module 2 is the easier or harder version, and the harder path can produce a different scaled score for the same raw count. Second, the conversion is <b>equated</b>, meaning it is calibrated per test form so that a given raw score carries the same meaning across different test dates.</p>
+      <p>Nothing else enters the calculation. There is no penalty for wrong answers, no points for unanswered questions, and no separate writing score on the current test.</p>
   </section>
-  <section class="faq">
+
+  <section id="table">
+    <h2>Raw to scaled score conversion table</h2>
+    <p>The table below applies the same smooth conversion this page's calculator uses: a piecewise-linear mapping of percent correct onto the 200–800 scale, derived from the ranges published across official practice tests. It is an approximation of a single form, not an official College Board table — treat it as a planning tool.</p>
+    <div class="tablewrap">
+    <table class="example-table">
+      <thead><tr><th>Correct</th><th>Reading &amp; Writing<br><small>(of 54)</small></th><th>Est. section score</th><th>Correct</th><th>Math<br><small>(of 44)</small></th><th>Est. section score</th></tr></thead>
+      <tbody>
+        <tr><td>54</td><td class="num">100%</td><td class="num">800</td><td>44</td><td class="num">100%</td><td class="num">800</td></tr>
+        <tr><td>50</td><td class="num">93%</td><td class="num">780</td><td>40</td><td class="num">91%</td><td class="num">770</td></tr>
+        <tr><td>45</td><td class="num">83%</td><td class="num">730</td><td>36</td><td class="num">82%</td><td class="num">720</td></tr>
+        <tr><td>40</td><td class="num">74%</td><td class="num">670</td><td>32</td><td class="num">73%</td><td class="num">670</td></tr>
+        <tr><td>35</td><td class="num">65%</td><td class="num">620</td><td>28</td><td class="num">64%</td><td class="num">610</td></tr>
+        <tr><td>30</td><td class="num">56%</td><td class="num">560</td><td>24</td><td class="num">55%</td><td class="num">560</td></tr>
+        <tr><td>25</td><td class="num">46%</td><td class="num">510</td><td>20</td><td class="num">45%</td><td class="num">500</td></tr>
+        <tr><td>20</td><td class="num">37%</td><td class="num">450</td><td>16</td><td class="num">36%</td><td class="num">450</td></tr>
+        <tr><td>15</td><td class="num">28%</td><td class="num">390</td><td>12</td><td class="num">27%</td><td class="num">390</td></tr>
+        <tr><td>10</td><td class="num">19%</td><td class="num">330</td><td>8</td><td class="num">18%</td><td class="num">330</td></tr>
+        <tr><td>5</td><td class="num">9%</td><td class="num">260</td><td>4</td><td class="num">9%</td><td class="num">260</td></tr>
+        <tr><td>0</td><td class="num">0%</td><td class="num">200</td><td>0</td><td class="num">0%</td><td class="num">200</td></tr>
+      </tbody>
+    </table>
+    </div>
+    <p class="caption">Correct counts are combined across both modules before conversion. Values are rounded to the nearest 10, which is how SAT section scores are reported.</p>
+    <p>Read the shape rather than the exact numbers. Between 45% and 75% correct, each extra two correct answers is worth roughly 25–30 scaled points. Above 90% correct the curve flattens hard: the last four questions on a section can be worth 20 points total. That is the same flattening you see in <a class="txt" href="/sat-percentiles/">SAT percentiles</a>, and it is the reason a 1550 is so much harder to reach than a 1400.</p>
+  </section>
+
+  <section id="adaptive">
+    <h2>Why Module 1 decides your ceiling</h2>
+    <p>This is the single most consequential difference between the paper SAT and the current test, and the one most raw-score estimates ignore.</p>
+    <p>Every student takes the same Module 1. Based on how you do there, Bluebook routes you to either the easier or the harder version of Module 2. Both routes cover the same skills, but the harder route contains questions that can support a top scaled score and the easier route cannot, no matter how many you get right on it.</p>
+    <ul>
+      <li><b>The routing threshold is real but not published.</b> College Board does not publish the exact number of Module 1 correct answers that unlocks the harder Module 2. Anecdotal reports put it somewhere around two-thirds correct, varying by form.</li>
+      <li><b>Missing the harder route caps your section score</b> in roughly the 600s even with a near-perfect Module 2.</li>
+      <li><b>Practical consequence:</b> Module 1 is worth more attention than its 27 questions suggest. A slow, careful first module buys you access to the questions that make 700+ possible.</li>
+    </ul>
+    <div class="note-box"><b>What this means for practice tests:</b> a raw score from a non-adaptive practice test is not directly comparable to a real Digital SAT result, because you cannot tell which module path you would have taken. Bluebook's official practice tests do simulate routing, which is why they are the only practice scores worth converting against this table.</div>
+  </section>
+
+  <section id="equating">
+    <h2>Equating, explained without the jargon</h2>
+    <p>Two test forms are never exactly the same difficulty. If December's form happens to be slightly harder than October's, a student who answers 40 questions right in December should not be penalized for it. Equating is the statistical adjustment that prevents this.</p>
+    <p>The mechanism: College Board embeds common questions across forms and uses how students perform on those shared items to line the two forms up. The raw-to-scaled conversion table is then generated separately for each form. The result you experience is that a given raw score maps to a slightly different scaled score depending on the date — which is also why tables published with different practice tests do not match each other exactly.</p>
+    <p>For planning purposes the practical takeaway is simple: do not chase a specific raw-count target. Chase a percent-correct band, and expect ±20 points of section-level noise from form to form even when your ability has not changed.</p>
+  </section>
+
+  <section id="accuracy">
+    <h2>Why your estimate may differ by 30–60 points</h2>
+    <p>Three sources of error stack up, and none of them are fixable by a better calculator:</p>
+    <ol>
+      <li><b>Adaptive routing.</b> The calculator cannot know which Module 2 you received. A hard-route 25 correct and an easy-route 25 correct are not the same score.</li>
+      <li><b>Equating.</b> Each form has its own conversion table. We smooth the published ranges, so we are always approximating.</li>
+      <li><b>Pretest questions.</b> Each module contains unscored questions being tried out for future forms. They look identical to scored questions, so your perceived correct count is never exactly your scored count.</li>
+    </ol>
+    <p>Add those up and a realistic error band is about 30–60 points on the total, with the largest gaps near the top and bottom of the scale where the curve is flattest. If you are using this page to decide whether a score is "in range" for a college, check how far you are from the edge of the range — our guide to <a class="txt" href="/good-sat-score/">what counts as a good SAT score</a> uses middle-50% ranges rather than single cutoffs for exactly this reason.</p>
+  </section>
+
+  <section id="facts">
+    <h2>Scoring facts people get wrong</h2>
+    <h3>"Wrong answers cost you a quarter point"</h3>
+    <p>That was the old paper SAT, which deducted a fraction for wrong answers and encouraged skipping. The Digital SAT has no wrong-answer penalty. Guessing is always at least as good as leaving a blank, so an unanswered question is a pure loss.</p>
+    <h3>"Zero correct means zero points"</h3>
+    <p>No. The section scale starts at 200, so an all-wrong section reports 200, and the lowest possible total is 400. A 400 is not a score of zero; it is the floor of the scale.</p>
+    <h3>"The essay adds to my 1600"</h3>
+    <p>The essay is no longer part of the SAT. There is no separate writing score on the current test, and no colleges require it.</p>
+    <h3>"My school's practice test score is my SAT score"</h3>
+    <p>Only if the practice test was taken in Bluebook with adaptive routing. Paper practice tests and third-party tests do not reproduce the routing or the equating, so their raw scores convert differently.</p>
+  </section>
+
+  <section class="faq" id="faq">
     <h2>Frequently asked questions</h2>
     <details open><summary>Is this calculator affiliated with College Board?</summary><p>No. This is an independent estimating tool built from publicly available practice-test score ranges. It is not affiliated with, endorsed by, or officially connected to College Board. Only College Board can issue an official SAT score.</p></details>
       <details><summary>Can I use College Board score tables to predict my score?</summary><p>Yes, approximately. The tables published with official practice tests map raw correct-answer counts to scaled scores for a specific form. Our calculator smooths those published ranges into one estimator, so it is close but not exact.</p></details>
       <details><summary>Does College Board penalize wrong answers on the Digital SAT?</summary><p>No. The Digital SAT removed the wrong-answer penalty. Only correct answers earn points, so guessing is never worse than leaving a question blank.</p></details>
+      <details><summary>How many questions are on the Digital SAT?</summary><p>Reading &amp; Writing has 54 questions across two 27-question modules. Math has 44 questions across two 22-question modules. Each section is scored out of 800 and the total is out of 1600.</p></details>
+      <details><summary>What is equating and why does it affect my score?</summary><p>Equating adjusts the raw-to-scaled conversion so that a given raw score means the same thing on every test date, even when one form is slightly harder. That is why the same number of correct answers can produce a slightly different scaled score on two different dates.</p></details>
+      <details><summary>How accurate is a raw-score estimate?</summary><p>Usually within about 30 to 60 points of the official total. The error comes from adaptive module routing, per-form equating, and unscored pretest questions mixed into each module.</p></details>
+      <details><summary>Why did I get 200 on a section with zero correct answers?</summary><p>Because 200 is the floor of the section scale, not zero. The section range is 200 to 800, so an empty or all-wrong section reports 200 rather than 0.</p></details>
   </section>
+
   <section>
     <h2>Related guides &amp; tools</h2>
     <p><a href="/good-sat-score/" style="color:var(--brand)">What Is a Good SAT Score in 2026?</a> — benchmarks by college type.</p>
     <p><a href="/sat-percentiles/" style="color:var(--brand)">SAT Percentiles 2026: Full Chart</a> — where any score ranks nationally.</p>
     <p><a href="/average-sat-score/" style="color:var(--brand)">Average SAT Score in 2026</a> — national averages and trends.</p>
+    <p><a href="/sat-score-calculator-2026/" style="color:var(--brand)">SAT Score Calculator 2026</a> — the main estimator, with per-module inputs.</p>
     <p><a href="/" style="color:var(--brand)">← Back to the main SAT Score Calculator</a></p>
   </section>
 </main>
