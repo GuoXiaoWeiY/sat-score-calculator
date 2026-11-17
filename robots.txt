@@ -13,4 +13,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://guoxiaoweiy.github.io/sat-score-calculator/sitemap.xml
+Sitemap: https://satcalcpro.dpdns.org/sitemap.xml
