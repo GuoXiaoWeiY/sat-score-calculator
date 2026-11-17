@@ -357,7 +357,7 @@ function calculate(){
   document.getElementById('mScore').textContent=ma;
   var total=rw+ma;
   document.getElementById('totalScore').textContent=total;
-  document.getElementById('rangeNote').textContent='Typical range: '+(total-30)+'\u2013'+(total+30)+' — estimates usually land within \u00B130 points of the official score.';
+  document.getElementById('rangeNote').textContent='Typical range: '+Math.max(400,total-30)+'\u2013'+Math.min(1600,total+30)+' — estimates usually land within \u00B130 points of the official score.';
   document.getElementById('result').style.display='block';
 }
 document.getElementById('yr').textContent=new Date().getFullYear();
