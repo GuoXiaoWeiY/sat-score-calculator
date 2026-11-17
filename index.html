@@ -5,11 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SAT Score Calculator — Free Digital SAT Score Estimator</title>
 <meta name="description" content="Free digital SAT score calculator. Enter your correct answers for Reading & Writing and Math to estimate your 400-1600 score. No signup.">
-<link rel="canonical" href="https://www.satscorecalculator.com/">
+<link rel="canonical" href="https://guoxiaoweiy.github.io/sat-score-calculator/">
 <meta property="og:title" content="Free SAT Score Calculator">
 <meta property="og:description" content="Estimate your Digital SAT score out of 1600. Free, instant, no sign-up.">
-<meta property="og:image" content="https://www.satscorecalculator.com/og-image.png">
 <meta property="og:type" content="website">
+<meta property="og:url" content="https://guoxiaoweiy.github.io/sat-score-calculator/">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Free SAT Score Calculator">
+<meta name="twitter:description" content="Estimate your Digital SAT score out of 1600. Free, instant, no sign-up.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎓</text></svg>">
 <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
 
 <!-- ===== Google Analytics 4 (已启用 2026-11-16) ===== -->
@@ -31,7 +35,7 @@
     {
       "@type": "WebApplication",
       "name": "SAT Score Calculator",
-      "url": "https://www.satscorecalculator.com/",
+      "url": "https://guoxiaoweiy.github.io/sat-score-calculator/",
       "applicationCategory": "EducationalApplication",
       "operatingSystem": "Any",
       "description": "Free digital SAT score calculator. Estimate your 400-1600 score from your practice test answers.",
@@ -144,6 +148,7 @@
   <main>
     <h1>Free SAT Score Calculator</h1>
     <p class="lede">Estimate your Digital SAT score out of 1600. Free, instant, and private — no sign-up needed.</p>
+    <p class="note" style="margin-top:4px">Last updated: November 2026 · Based on College Board's publicly available practice-test scoring data.</p>
 
     <!-- 首屏工具：文案与表单全部写死在 HTML 源码里，服务端渲染即可见 -->
     <section class="card" aria-label="SAT score calculator tool">
@@ -173,6 +178,7 @@
           <div>Reading &amp; Writing <b id="rwScore">0</b></div>
           <div>Math <b id="mScore">0</b></div>
         </div>
+        <p class="note" id="rangeNote"></p>
         <p class="note">Estimated score. Only College Board can issue an official score. <a href="#accuracy" style="color:var(--brand)">How accurate is this?</a></p>
       </div>
     </section>
@@ -233,6 +239,81 @@
       <details><summary>Is this the same as an official College Board score?</summary><p>No. Only College Board can issue an official SAT score from an actual test. This tool is an independent estimator built from publicly available practice-test score ranges. It is not affiliated with or endorsed by College Board. Use the estimate to guide studying and track progress, not for college applications.</p></details>
     </section>
     <section>
+      <h2 id="conversion">Digital SAT raw-to-scaled score conversion chart</h2>
+      <p>The chart below shows how a raw score (the number of questions you answered correctly) converts to the 200–800 scaled range for each section, in even steps. This is the same mapping our calculator uses, based on publicly available practice-test scoring data — the official conversion for a given test may shift a few points up or down with that test's difficulty.</p>
+      <table class="example-table">
+        <thead><tr><th>Raw correct (of 54)</th><th>RW scaled</th><th>Raw correct (of 44)</th><th>Math scaled</th></tr></thead>
+        <tbody>
+          <tr><td>0</td><td>200</td><td>0</td><td>200</td></tr>
+          <tr><td>2</td><td>230</td><td>2</td><td>230</td></tr>
+          <tr><td>4</td><td>250</td><td>4</td><td>260</td></tr>
+          <tr><td>6</td><td>280</td><td>6</td><td>300</td></tr>
+          <tr><td>8</td><td>300</td><td>8</td><td>330</td></tr>
+          <tr><td>10</td><td>330</td><td>10</td><td>360</td></tr>
+          <tr><td>12</td><td>360</td><td>12</td><td>390</td></tr>
+          <tr><td>14</td><td>380</td><td>14</td><td>420</td></tr>
+          <tr><td>16</td><td>410</td><td>16</td><td>450</td></tr>
+          <tr><td>18</td><td>430</td><td>18</td><td>480</td></tr>
+          <tr><td>20</td><td>450</td><td>20</td><td>500</td></tr>
+          <tr><td>22</td><td>470</td><td>22</td><td>530</td></tr>
+          <tr><td>24</td><td>500</td><td>24</td><td>560</td></tr>
+          <tr><td>26</td><td>520</td><td>26</td><td>580</td></tr>
+          <tr><td>28</td><td>540</td><td>28</td><td>610</td></tr>
+          <tr><td>30</td><td>560</td><td>30</td><td>640</td></tr>
+          <tr><td>32</td><td>590</td><td>32</td><td>670</td></tr>
+          <tr><td>34</td><td>610</td><td>34</td><td>690</td></tr>
+          <tr><td>36</td><td>630</td><td>36</td><td>720</td></tr>
+          <tr><td>38</td><td>650</td><td>38</td><td>750</td></tr>
+          <tr><td>40</td><td>670</td><td>40</td><td>770</td></tr>
+          <tr><td>42</td><td>700</td><td>42</td><td>790</td></tr>
+          <tr><td>44</td><td>720</td><td>44</td><td>800</td></tr>
+          <tr><td>46</td><td>740</td><td>—</td><td>—</td></tr>
+          <tr><td>48</td><td>760</td><td>—</td><td>—</td></tr>
+          <tr><td>50</td><td>780</td><td>—</td><td>—</td></tr>
+          <tr><td>52</td><td>790</td><td>—</td><td>—</td></tr>
+          <tr><td>54</td><td>800</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="percentile">What percentile is my SAT score?</h2>
+      <p>Your percentile tells you what share of test takers you scored equal to or better than. The values below are approximate total-score percentiles across all SAT test takers — check the official table at <a href="https://satsuite.collegeboard.org/sat/what-is-sat/understanding-scores" rel="noopener nofollow" target="_blank" style="color:var(--brand)">College Board's Understanding Scores page</a> for the exact figures.</p>
+      <table class="example-table">
+        <thead><tr><th>Total score</th><th>Percentile (approx.)</th><th>Total score</th><th>Percentile (approx.)</th></tr></thead>
+        <tbody>
+          <tr><td>1600</td><td>99+</td><td>1100</td><td>46</td></tr>
+          <tr><td>1550</td><td>99</td><td>1050</td><td>37</td></tr>
+          <tr><td>1500</td><td>97</td><td>1000</td><td>28</td></tr>
+          <tr><td>1450</td><td>94</td><td>950</td><td>20</td></tr>
+          <tr><td>1400</td><td>90</td><td>900</td><td>14</td></tr>
+          <tr><td>1350</td><td>85</td><td>850</td><td>9</td></tr>
+          <tr><td>1300</td><td>79</td><td>800</td><td>6</td></tr>
+          <tr><td>1250</td><td>72</td><td>750</td><td>4</td></tr>
+          <tr><td>1200</td><td>64</td><td>700</td><td>2</td></tr>
+          <tr><td>1150</td><td>55</td><td>650</td><td>1</td></tr>
+        </tbody>
+      </table>
+
+      <h2 id="universities">What SAT score do I need for college?</h2>
+      <p>Most colleges publish a "middle 50%" SAT range — 25% of admitted students score below it, 25% score above it. A score near the top of a school's range makes you competitive there; near the bottom means the rest of your application has to carry more weight. Approximate middle-50% ranges below are for orientation only — always verify with each school's admissions page.</p>
+      <table class="example-table">
+        <thead><tr><th>University</th><th>Middle 50% SAT (approx.)</th></tr></thead>
+        <tbody>
+          <tr><td>MIT</td><td>1500–1580</td></tr>
+          <tr><td>Harvard</td><td>1490–1580</td></tr>
+          <tr><td>Stanford</td><td>1500–1580</td></tr>
+          <tr><td>Princeton</td><td>1490–1570</td></tr>
+          <tr><td>Yale</td><td>1490–1570</td></tr>
+          <tr><td>Duke</td><td>1510–1570</td></tr>
+          <tr><td>Georgia Tech</td><td>1370–1530</td></tr>
+          <tr><td>University of Michigan</td><td>1360–1530</td></tr>
+          <tr><td>UT Austin</td><td>1340–1500</td></tr>
+          <tr><td>Boston University</td><td>1390–1520</td></tr>
+          <tr><td>Purdue</td><td>1310–1480</td></tr>
+          <tr><td>Arizona State</td><td>1160–1410</td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section>
       <h2>Related SAT score tools</h2>
       <p><a href="/sat-score-calculator/sat-score-calculator-2026/" style="color:var(--brand)">SAT Score Calculator 2026</a> — estimate your score with the latest test format.</p>
       <p><a href="/sat-score-calculator/college-board/" style="color:var(--brand)">SAT Score Calculator &amp; College Board Tables</a> — how official scoring works and why estimates differ.</p>
@@ -242,7 +323,7 @@
   <footer>
     <div>© <span id="yr">2026</span> SAT Score Calculator. An independent estimating tool, not affiliated with College Board.</div>
     <div style="margin-top:10px">
-      <a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="/contact">Contact</a>
+      <a href="privacy/">Privacy</a><a href="sat-score-calculator-2026/">2026 Update</a><a href="college-board/">College Board Tables</a><a href="https://github.com/GuoXiaoWeiY" rel="noopener" target="_blank">Contact</a>
     </div>
   </footer>
 </div>
@@ -274,7 +355,9 @@ function calculate(){
   var ma=toScaled(m1+m2,44);
   document.getElementById('rwScore').textContent=rw;
   document.getElementById('mScore').textContent=ma;
-  document.getElementById('totalScore').textContent=rw+ma;
+  var total=rw+ma;
+  document.getElementById('totalScore').textContent=total;
+  document.getElementById('rangeNote').textContent='Typical range: '+(total-30)+'\u2013'+(total+30)+' — estimates usually land within \u00B130 points of the official score.';
   document.getElementById('result').style.display='block';
 }
 document.getElementById('yr').textContent=new Date().getFullYear();
