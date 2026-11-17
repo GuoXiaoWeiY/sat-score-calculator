@@ -19,6 +19,24 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://guoxiaoweiy.github.io/sat-score-calculator/good-sat-score/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxiaoweiy.github.io/sat-score-calculator/sat-percentiles/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://guoxiaoweiy.github.io/sat-score-calculator/average-sat-score/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://guoxiaoweiy.github.io/sat-score-calculator/privacy/</loc>
     <lastmod>2026-11-17</lastmod>
     <changefreq>monthly</changefreq>
