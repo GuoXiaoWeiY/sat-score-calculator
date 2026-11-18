@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://satcalcpro.dpdns.org/</loc>
     <lastmod>2026-11-17</lastmod>
@@ -20,21 +21,41 @@
   </url>
   <url>
     <loc>https://satcalcpro.dpdns.org/good-sat-score/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://satcalcpro.dpdns.org/images/good-sat-score-by-goal.png</image:loc>
+      <image:title>What is a good SAT score? Benchmarks by goal</image:title>
+      <image:caption>Target SAT score ranges by college goal: 1030-1100 to clear the national average, up to 1490+ for a top-20 national college, with national percentile for each.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://satcalcpro.dpdns.org/sat-percentiles/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://satcalcpro.dpdns.org/images/sat-percentile-chart.png</image:loc>
+      <image:title>SAT score to percentile chart 2026</image:title>
+      <image:caption>Chart mapping SAT total scores from 400 to 1600 to user group and nationally representative percentiles; 1200 is the 75th percentile of test takers.</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://satcalcpro.dpdns.org/images/sat-score-distribution.png</image:loc>
+      <image:title>SAT score distribution for the class of 2025</image:title>
+      <image:caption>Bar chart of the share of 2,004,965 SAT test takers in each total-score band, from 400-590 up to 1400-1600.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://satcalcpro.dpdns.org/average-sat-score/</loc>
-    <lastmod>2026-11-17</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://satcalcpro.dpdns.org/images/average-sat-score-by-year.png</image:loc>
+      <image:title>Average SAT score by graduating class 2020-2025</image:title>
+      <image:caption>Bar chart of national average SAT total scores by graduating class: 1051 in 2020, 1060 in 2021, 1050 in 2022, 1028 in 2023, 1024 in 2024, and 1029 in 2025.</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://satcalcpro.dpdns.org/privacy/</loc>
