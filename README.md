@@ -11,6 +11,8 @@ A free, no-signup Digital SAT score calculator. Enter the number of correct answ
 - **Score estimation** — converts raw correct-answer counts from the Reading & Writing and Math modules into a scaled 400–1600 score, using the College Board's practice-test conversion tables as a reference.
 - **Section breakdown** — shows the Reading & Writing and Math section scores (200–800 each) alongside the total.
 - **Percentile lookup** — tells you roughly what percentage of test takers scored below you.
+- **Score prediction** — project a future SAT score from a PSAT result or practice test and the time you have left to study.
+- **PSAT percentiles by grade** — PSAT scores are interpreted within your grade (320–1520 scale), with National Merit Selection Index cutoffs explained.
 - **No accounts, no data collection** — every calculation runs in the browser. Nothing is uploaded or stored.
 
 ## Pages
@@ -23,6 +25,8 @@ A free, no-signup Digital SAT score calculator. Enter the number of correct answ
 | [What is a good SAT score?](https://satcalcpro.dpdns.org/good-sat-score/) | Benchmarks by college selectivity |
 | [SAT percentiles](https://satcalcpro.dpdns.org/sat-percentiles/) | Full 400–1600 percentile chart |
 | [Average SAT score](https://satcalcpro.dpdns.org/average-sat-score/) | National averages and recent trends |
+| [SAT score predictor](https://satcalcpro.dpdns.org/sat-score-predictor/) | Predict a future SAT score from your PSAT or practice test |
+| [PSAT percentiles](https://satcalcpro.dpdns.org/psat-percentiles/) | PSAT percentiles by grade (10th/11th) and National Merit cutoffs |
 
 ## Why we built it
 
