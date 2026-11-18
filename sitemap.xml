@@ -64,6 +64,17 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://satcalcpro.dpdns.org/psat-percentiles/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://satcalcpro.dpdns.org/images/psat-percentile-by-grade.png</image:loc>
+      <image:title>PSAT percentile by score and grade 2026</image:title>
+      <image:caption>PSAT percentile curves for 8th to 11th grade from 320 to 1520; a 1200 total is the 82nd percentile in 11th grade but the 92nd in 10th.</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://satcalcpro.dpdns.org/privacy/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
