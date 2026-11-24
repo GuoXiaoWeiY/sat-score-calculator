@@ -180,7 +180,7 @@
           <div>Math <b id="mScore">0</b></div>
         </div>
         <p class="note" id="rangeNote"></p>
-        <p class="note">Estimated score. Only College Board can issue an official score. <a href="#accuracy" style="color:var(--brand)">How accurate is this?</a></p>
+        <p class="note">Estimated score. Only College Board can issue an official score. <a href="/accuracy-report/" style="color:var(--brand)">See our measured accuracy report</a> — real comparison data, no unverified claims.</p>
       </div>
     </section>
 
@@ -215,7 +215,7 @@
 
       <h2 id="accuracy">Is this SAT score calculator accurate?</h2>
       <p>This tool gives an estimate, not an official score. College Board uses equating to adjust scores between test forms, and the digital SAT's adaptive modules mean two students with the same number of correct answers can receive different scaled scores depending on question difficulty. Our calculator uses published score ranges from official practice tests to guide study decisions and track progress between practice tests. We have not published a validation study, so we do not claim a verified margin of error — treat the result as a rough estimate, not a prediction of your official score.</p>
-      <p><strong>Accuracy disclaimer:</strong> This tool provides an estimated Digital SAT score based on your practice-test performance. Actual SAT scores may vary depending on question difficulty, adaptive testing, and the official College Board scoring process. This calculator is not affiliated with, endorsed by, or officially connected to the College Board.</p>
+      <p><strong>Accuracy disclaimer:</strong> This tool provides an estimated Digital SAT score based on your practice-test performance. Actual SAT scores may vary depending on question difficulty, adaptive testing, and the official College Board scoring process. This calculator is not affiliated with, endorsed by, or officially connected to the College Board. For the measured comparison behind these limits, read our <a href="/accuracy-report/" style="color:var(--brand)">accuracy report</a>.</p>
 
       <h2>Is there a guessing penalty?</h2>
       <p>No. The digital SAT removed the old wrong-answer penalty. You earn credit only for correct answers, and wrong or blank answers both score zero. That means you should always answer every question, even when you have to guess.</p>
@@ -322,6 +322,7 @@
       <p><a href="/sat-percentiles/" style="color:var(--brand)">SAT Percentiles 2026: Full Chart</a> — see exactly where any score ranks nationally.</p>
       <p><a href="/average-sat-score/" style="color:var(--brand)">Average SAT Score in 2026</a> — national averages, trends, and what they mean for you.</p>
       <p><a href="/sat-score-predictor/" style="color:var(--brand)">SAT Score Predictor</a> — predict your future SAT score from a PSAT or practice test.</p>
+      <p><a href="/accuracy-report/" style="color:var(--brand)">Accuracy Report</a> — our estimator measured against published conversion tables, with every data point shown.</p>
       <p><a href="/psat-percentiles/" style="color:var(--brand)">PSAT Percentiles 2026</a> — full PSAT percentile chart by grade and National Merit cutoffs.</p>
     </section>
   </main>
@@ -364,7 +365,7 @@ function calculate(){
   document.getElementById('mScore').textContent=ma;
   var total=rw+ma;
   document.getElementById('totalScore').textContent=total;
-  document.getElementById('rangeNote').textContent='Typical range: '+Math.max(400,total-30)+'\u2013'+Math.min(1600,total+30)+' — estimates usually land within \u00B130 points of the official score.';
+  document.getElementById('rangeNote').textContent='Estimate only — no verified margin of error. See our accuracy report for the measured comparison.';
   document.getElementById('result').style.display='block';
 }
 document.getElementById('yr').textContent=new Date().getFullYear();
