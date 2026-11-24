@@ -22,6 +22,8 @@
 ## Pages
 - Calculator: https://satcalcpro.dpdns.org/
 - Measured accuracy report: https://satcalcpro.dpdns.org/accuracy-report/
+- Score range calculator (estimate plus measured band): https://satcalcpro.dpdns.org/sat-score-range-calculator/
+- Target score calculator (work backward from a goal): https://satcalcpro.dpdns.org/sat-target-score-calculator/
 - 2026 guide: https://satcalcpro.dpdns.org/sat-score-calculator-2026/
 - Good score: https://satcalcpro.dpdns.org/good-sat-score/
 - Percentiles: https://satcalcpro.dpdns.org/sat-percentiles/
