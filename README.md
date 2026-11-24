@@ -12,6 +12,9 @@ A free, no-signup Digital SAT score calculator. Enter the number of correct answ
 - **Section breakdown** — shows the Reading & Writing and Math section scores (200–800 each) alongside the total.
 - **Percentile lookup** — tells you roughly what percentage of test takers scored below you.
 - **Score prediction** — project a future SAT score from a PSAT result or practice test and the time you have left to study.
+- **Measured accuracy report** — a point-by-point comparison of our conversion function against two published Digital SAT tables, with every data point shown.
+- **Score range calculator** — shows a band around the estimate, derived from measured table-to-table differences, instead of a false-precision single number.
+- **Target score calculator** — works backward from a goal to rough correct-answer requirements under a stated equal-difficulty assumption.
 - **PSAT percentiles by grade** — PSAT scores are interpreted within your grade (320–1520 scale), with National Merit Selection Index cutoffs explained.
 - **No accounts, no data collection** — every calculation runs in the browser. Nothing is uploaded or stored.
 
@@ -25,6 +28,9 @@ A free, no-signup Digital SAT score calculator. Enter the number of correct answ
 | [What is a good SAT score?](https://satcalcpro.dpdns.org/good-sat-score/) | Benchmarks by college selectivity |
 | [SAT percentiles](https://satcalcpro.dpdns.org/sat-percentiles/) | Full 400–1600 percentile chart |
 | [Average SAT score](https://satcalcpro.dpdns.org/average-sat-score/) | National averages and recent trends |
+| [Accuracy report](https://satcalcpro.dpdns.org/accuracy-report/) | Measured MAE, source tables, and every comparison point |
+| [SAT score range calculator](https://satcalcpro.dpdns.org/sat-score-range-calculator/) | Estimate plus a measured table-to-table band |
+| [SAT target score calculator](https://satcalcpro.dpdns.org/sat-target-score-calculator/) | Work backward from a goal to rough raw scores |
 | [SAT score predictor](https://satcalcpro.dpdns.org/sat-score-predictor/) | Predict a future SAT score from your PSAT or practice test |
 | [PSAT percentiles](https://satcalcpro.dpdns.org/psat-percentiles/) | PSAT percentiles by grade (10th/11th) and National Merit cutoffs |
 
