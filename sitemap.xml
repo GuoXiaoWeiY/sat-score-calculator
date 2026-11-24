@@ -20,6 +20,18 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://satcalcpro.dpdns.org/sat-score-range-calculator/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://satcalcpro.dpdns.org/sat-target-score-calculator/</loc>
+    <lastmod>2026-11-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://satcalcpro.dpdns.org/college-board/</loc>
     <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
