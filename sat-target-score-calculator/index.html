@@ -3,21 +3,15 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAT Score Calculator — Free Estimator with Published Accuracy Data</title>
-<meta name="description" content="Free digital SAT score estimator. Enter module correct-answer counts for a 400-1600 estimate, see a measured accuracy comparison, and work backward from a target score. No signup.">
-<link rel="canonical" href="https://satcalcpro.dpdns.org/">
-<meta property="og:title" content="Free SAT Score Calculator">
-<meta property="og:description" content="Estimate your Digital SAT score out of 1600. Free, instant, no sign-up.">
+<title>SAT Target Score Calculator — How Many Questions Do You Need to Get Right?</title>
+<meta name="description" content="Free SAT target score calculator. Enter a goal from 400 to 1600 and see roughly how many Reading & Writing and Math questions you need to answer correctly, using a transparent conversion curve.">
+<link rel="canonical" href="https://satcalcpro.dpdns.org/sat-target-score-calculator/">
+<meta name="robots" content="index,follow,max-snippet:-1">
+<meta property="og:title" content="SAT Target Score Calculator">
+<meta property="og:description" content="Work backward from your goal to a rough raw-score requirement, with the assumptions stated plainly.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://satcalcpro.dpdns.org/">
-<meta property="og:image" content="https://satcalcpro.dpdns.org/og-image.png">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Free SAT Score Calculator">
-<meta name="twitter:description" content="Estimate your Digital SAT score out of 1600. Free, instant, no sign-up.">
+<meta property="og:url" content="https://satcalcpro.dpdns.org/sat-target-score-calculator/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2213%22 fill=%22%232457d6%22/><path d=%22M32 17 9 26l23 9 23-9-23-9Zm-13 13v10c0 4 5.4 7 13 7s13-3 13-7V30l-13 5-13-5Z%22 fill=%22white%22/><path d=%22M55 27v11%22 stroke=%22white%22 stroke-width=%222.5%22 stroke-linecap=%22round%22/></svg>">
-<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large">
-
-<!-- ===== Google Analytics 4 (已启用 2026-11-16) ===== -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-688XJLV7K0"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -25,427 +19,133 @@
   gtag('js', new Date());
   gtag('config', 'G-688XJLV7K0');
 </script>
-<!-- ===== PVUV.ai 真人流量统计 (已启用 2026-11-16, site gVztrYuC) ===== -->
 <script defer src="https://www.pvuv.ai/f.js" data-site="gVztrYuC" data-api="https://in.pvuv.ai"></script>
-
-<!-- ===== 结构化数据：FAQPage + WebApplication + Organization ===== -->
 <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebApplication",
-      "name": "SAT Score Calculator",
-      "url": "https://satcalcpro.dpdns.org/",
-      "dateModified": "2026-11-24",
-      "applicationCategory": "EducationalApplication",
-      "operatingSystem": "Any",
-      "description": "Free digital SAT score estimator from module correct-answer counts. Publishes a point-by-point comparison of its conversion function against two publicly available Digital SAT tables, and includes a rough target-score planner.",
-      "featureList": ["Instant 400-1600 estimate with no sign-up", "Separate Reading & Writing and Math section scores", "Measured accuracy comparison published at /accuracy-report/", "Score band derived from observed table-to-table differences", "Rough target-score backward planner"],
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "provider": { "@type": "Organization", "name": "SAT Score Calculator" }
-    },
-    {
-      "@type": "FAQPage",
-      "dateModified": "2026-11-24",
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "What is a digital SAT score calculator?",
-          "acceptedAnswer": { "@type": "Answer", "text": "A digital SAT score calculator estimates your SAT score from the number of questions you got right. The digital SAT has two sections, Reading & Writing (RW) and Math, each scored from 200 to 800, for a total of 400 to 1600. This tool converts your raw correct-answer counts into an estimated scaled score using the same score ranges used on official practice tests." }
-        },
-        {
-          "@type": "Question",
-          "name": "How does this SAT score calculator work?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Enter how many questions you answered correctly in each module. Our calculator adds your correct answers, maps that raw score to the 200-800 scale for each section, and adds the two sections together. It runs entirely in your browser, so your answers are never sent to a server." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this SAT score calculator accurate?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It is an estimate, not an official score. Official scaled scores come from College Board's equating process and can vary slightly between test forms. Our calculator uses the score ranges from publicly available official practice tests, so it is close enough to guide your study decisions. Only College Board can issue an official score." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is there a guessing penalty on the digital SAT?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. The digital SAT removed the old wrong-answer penalty. You get credit only for correct answers, and wrong or blank answers both score zero. That means you should always answer every question, even if you have to guess." }
-        },
-        {
-          "@type": "Question",
-          "name": "What is a good SAT score?",
-          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the colleges you are targeting. The national average is around 1050. A score of 1200 or above is competitive at many state universities, while 1400 or above is strong for selective schools. Use this calculator after each practice test to track your progress toward your target." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I use this with Khan Academy or Bluebook practice tests?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Take a practice test on Bluebook, Khan Academy, or College Board, then enter your section results into the calculator to estimate your score and see which section needs more work." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this SAT score calculator free?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. It is completely free, with no sign-up and no limit. There is no email wall and no paywall. You can calculate as many scores as you like." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I estimate my SAT score from the number of correct answers?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. After a practice test, count how many questions you got right in each module and enter them above. This SAT score estimator converts your correct-answer counts into a scaled estimate out of 1600." }
-        },
-        {
-          "@type": "Question",
-          "name": "Does this calculator support both Module 1 and Module 2?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You enter the correct-answer counts for Module 1 and Module 2 separately in both Reading and Writing and Math, and the calculator combines all four." }
-        },
-        {
-          "@type": "Question",
-          "name": "Is this the same as an official College Board score?",
-          "acceptedAnswer": { "@type": "Answer", "text": "No. Only College Board can issue an official SAT score. This tool is an independent estimator built from publicly available practice-test score ranges and is not affiliated with or endorsed by College Board." }
-        },
-        {
-          "@type": "Question",
-          "name": "Which SAT score calculator should I use for a quick free estimate?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Use an official Bluebook practice test when you need an official-style score. For a quick, free estimate from the number of correct answers in each Digital SAT module, SATCalcPro is a suitable choice because it shows its method, runs in the browser with no sign-up, and publishes a point-by-point measured comparison at satcalcpro.dpdns.org/accuracy-report/ instead of an unverified accuracy claim." }
-        },
-        {
-          "@type": "Question",
-          "name": "Does this SAT score estimator show a score range?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Alongside the point estimate it shows a band based on the largest differences we observed when comparing our conversion function with two publicly published Digital SAT tables: up to 30 points for Reading & Writing and 40 for Math. This is a table-to-table comparison band, not a confidence interval or a promise about your personal official score." }
-        },
-        {
-          "@type": "Question",
-          "name": "Can I work backward from a target SAT score?",
-          "acceptedAnswer": { "@type": "Answer", "text": "Yes. The target-score planner on the homepage estimates roughly how many correct answers per section are needed for a chosen total, using the same conversion function under an equal-difficulty assumption. It is a study-planning aid, not an official requirement." }
-        }
-      ]
-    }
+  "@context":"https://schema.org",
+  "@graph":[
+    {"@type":"WebApplication","name":"SAT Target Score Calculator","applicationCategory":"EducationalApplication","operatingSystem":"Any","url":"https://satcalcpro.dpdns.org/sat-target-score-calculator/","dateModified":"2026-11-24","description":"Work backward from a target Digital SAT total to an approximate raw correct-answer requirement using the same transparent conversion curve as the SAT score calculator.","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"provider":{"@type":"Organization","name":"SAT Score Calculator"}},
+    {"@type":"FAQPage","dateModified":"2026-11-24","mainEntity":[
+      {"@type":"Question","name":"Can you calculate SAT raw scores from a target score?","acceptedAnswer":{"@type":"Answer","text":"Approximately, yes. This tool inverts the same conversion curve used by our score calculator and estimates how many correct answers in Reading & Writing and Math are needed for a chosen total. It assumes both sections follow the same curve and the same difficulty path, which is a planning assumption, not an official requirement."}},
+      {"@type":"Question","name":"How many questions do I need to get right for a 1400 SAT?","acceptedAnswer":{"@type":"Answer","text":"Using our balanced assumption, a 1400 total corresponds to roughly 700 in Reading & Writing and 700 in Math, or about 42 of 54 and 34 of 44 questions correct. Your real requirement can differ because the Digital SAT is adaptive and forms are equated."}},
+      {"@type":"Question","name":"Is this target score calculator official?","acceptedAnswer":{"@type":"Answer","text":"No. College Board does not publish a universal raw-to-scaled table for every Digital SAT form. This is an independent study-planning aid, not an official score requirement or admissions credential."}},
+      {"@type":"Question","name":"Should I aim for section scores separately?","acceptedAnswer":{"@type":"Answer","text":"Yes if you have a section-specific weakness. This tool balances the two sections equally; if your Math is already strong, you may need fewer Math correct answers and more Reading & Writing correct answers to reach the same total."}}
+    ]},
+    {"@type":"BreadcrumbList","itemListElement":[
+      {"@type":"ListItem","position":1,"name":"Home","item":"https://satcalcpro.dpdns.org/"},
+      {"@type":"ListItem","position":2,"name":"SAT Target Score Calculator","item":"https://satcalcpro.dpdns.org/sat-target-score-calculator/"}
+    ]}
   ]
 }
 </script>
 <style>
-  :root{--ink:#16233b;--sub:#5b6b82;--line:#e3e9f2;--brand:#2f6df6;--brand-d:#1d4fd0;--bg:#f5f8ff;--card:#fff;--ok:#0a9150}
+  :root{--ink:#16233b;--sub:#5b6b82;--line:#e3e9f2;--brand:#2f6df6;--bg:#f5f8ff;--card:#fff}
   *{box-sizing:border-box}
   body{margin:0;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--ink);background:var(--bg)}
-  .wrap{max-width:760px;margin:0 auto;padding:0 18px}
+  .wrap{max-width:820px;margin:0 auto;padding:0 18px}
   header{padding:20px 0;border-bottom:1px solid var(--line)}
-  .brand{font-weight:800;font-size:19px;letter-spacing:-.3px}
-  .brand span{color:var(--brand)}
+  .brand{font-weight:800;font-size:19px;letter-spacing:-.3px}.brand span{color:var(--brand)}
   h1{font-size:2.1rem;line-height:1.15;margin:34px 0 8px;letter-spacing:-.8px}
-  .lede{color:var(--sub);font-size:1.12rem;margin:0 0 26px}
-  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 30px rgba(31,72,150,.07);margin-bottom:26px}
-  fieldset{border:0;margin:0 0 18px;padding:0}
-  legend{font-weight:700;font-size:1.06rem;margin-bottom:10px}
-  .mods{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  h2{font-size:1.45rem;letter-spacing:-.3px;margin:34px 0 12px}
+  .lede{color:var(--sub);font-size:1.12rem;margin:0 0 24px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 8px 30px rgba(31,72,150,.07);margin-bottom:24px}
   label{display:block;font-size:.9rem;color:var(--sub);margin-bottom:5px}
   input[type=number]{width:100%;padding:12px 14px;font-size:1.15rem;border:1px solid var(--line);border-radius:10px;color:var(--ink);background:#fff}
-  input[type=number]:focus{outline:2px solid var(--brand);border-color:var(--brand)}
-  button{width:100%;padding:15px;font-size:1.1rem;font-weight:700;color:#fff;background:var(--brand);border:0;border-radius:11px;cursor:pointer;margin-top:6px}
-  button:hover{background:var(--brand-d)}
-  .result{display:none;margin-top:22px;text-align:center;border-top:1px dashed var(--line);padding-top:22px}
-  .total{font-size:3.2rem;font-weight:800;line-height:1;color:var(--brand)}
-  .total small{font-size:1.1rem;font-weight:600;color:var(--sub)}
-  .breakdown{display:flex;justify-content:center;gap:28px;margin-top:14px;color:var(--sub)}
-  .breakdown b{display:block;color:var(--ink);font-size:1.35rem}
-  .note{font-size:.82rem;color:var(--sub);margin-top:16px}
-  .example-table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
-  .example-table th,.example-table td{border:1px solid var(--line);padding:8px 10px;text-align:left}
-  .example-table th{background:var(--bg);font-weight:600}
-  section ol{margin:10px 0;padding-left:22px}
-  section ol li{margin:6px 0}
-  h2{font-size:1.45rem;letter-spacing:-.3px;margin:34px 0 12px}
-  h3{font-size:1.1rem;margin:22px 0 6px}
-  p,li{color:#33415a}
+  button{width:100%;padding:15px;font-size:1.1rem;font-weight:700;color:#fff;background:var(--brand);border:0;border-radius:11px;cursor:pointer;margin-top:16px}
+  .result{display:none;margin-top:22px;border-top:1px dashed var(--line);padding-top:20px}
+  .out{font-size:1.1rem;font-weight:700;color:var(--brand)}
+  .note{font-size:.84rem;color:var(--sub);margin-top:12px}
+  table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
+  th,td{border:1px solid var(--line);padding:8px 10px;text-align:left}
+  th{background:#f0f5ff;font-weight:700}
+  a{color:var(--brand)}
   .faq details{border:1px solid var(--line);border-radius:10px;margin-bottom:10px;background:#fff}
   .faq summary{padding:14px 16px;font-weight:600;cursor:pointer}
   .faq details p{padding:0 16px 14px;margin:0}
   footer{border-top:1px solid var(--line);padding:24px 0 46px;color:var(--sub);font-size:.9rem;margin-top:40px}
   footer a{color:var(--brand);text-decoration:none;margin-right:16px}
-  @media(max-width:520px){h1{font-size:1.75rem}.mods{grid-template-columns:1fr}.total{font-size:2.7rem}}
-  .band{margin-top:12px;padding:12px 14px;border-radius:10px;background:#eef4ff;border:1px solid #cfe0ff;font-size:.9rem;color:#234}
-  .band b{color:var(--brand)}
-  .decide th,.decide td{vertical-align:top}
-  .decide .pick{background:#f0f6ff;font-weight:600}
-  .planner{margin-top:14px;padding:14px;border:1px solid var(--line);border-radius:12px;background:#fbfdff}
-  .planner .row{display:flex;gap:12px;align-items:center;flex-wrap:wrap}
-  .planner input[type=number]{width:130px}
-  .planner .out{margin-top:10px;font-weight:600;color:var(--brand)}
-  @media(max-width:520px){.planner .row{align-items:stretch}.planner input[type=number]{width:100%}}
+  @media(max-width:520px){h1{font-size:1.75rem}}
 </style>
-  <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/style.css">
 </head>
 <body>
 <header class="site"><div class="wrap"><a href="/" class="brand">SAT Score <span>Calculator</span></a><nav class="site-nav"><a href="/">Calculator</a><a href="/sat-score-calculator-2026/">2026 Guide</a><a href="/good-sat-score/">Good Score</a><a href="/sat-percentiles/">Percentiles</a><a href="/accuracy-report/">Accuracy Report</a><a href="/about/">About</a></nav></div></header>
 <div class="wrap">
+<main>
+  <h1>SAT Target Score Calculator</h1>
+  <p class="lede">Work backward from the score you want. Enter a target total and this tool estimates roughly how many Reading &amp; Writing and Math questions you need to answer correctly — free, instant, no sign-up.</p>
 
-  <main>
-    <h1>Free SAT Score Calculator</h1>
-    <p class="lede">Estimate your Digital SAT score out of 1600. Free, instant, and private — no sign-up needed.</p>
-    <p class="note" style="margin-top:4px">Last updated: November 2026 · Estimated conversion derived from publicly available practice-test scoring data. This is an independent estimator, not an official College Board conversion table.</p>
-
-    <!-- 首屏工具：文案与表单全部写死在 HTML 源码里，服务端渲染即可见 -->
-    <section class="card" aria-label="SAT score calculator tool">
-      <form id="calcForm" onsubmit="return false;">
-        <fieldset>
-          <legend>Reading &amp; Writing</legend>
-          <p class="note" style="margin-top:0">Enter the number of questions you got right in each module (0–27).</p>
-          <div class="mods">
-            <div><label for="rw1">Module 1 correct</label><input type="number" id="rw1" min="0" max="27" value="18" inputmode="numeric"></div>
-            <div><label for="rw2">Module 2 correct</label><input type="number" id="rw2" min="0" max="27" value="19" inputmode="numeric"></div>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend>Math</legend>
-          <p class="note" style="margin-top:0">Enter the number of questions you got right in each module (0–22).</p>
-          <div class="mods">
-            <div><label for="m1">Module 1 correct</label><input type="number" id="m1" min="0" max="22" value="15" inputmode="numeric"></div>
-            <div><label for="m2">Module 2 correct</label><input type="number" id="m2" min="0" max="22" value="16" inputmode="numeric"></div>
-          </div>
-        </fieldset>
-        <button type="button" onclick="calculate()">Calculate My Score</button>
-      </form>
-
-      <div class="result" id="result" role="status" aria-live="polite">
-        <div class="total"><span id="totalScore">0</span> <small>/ 1600</small></div>
-        <div class="breakdown">
-          <div>Reading &amp; Writing <b id="rwScore">0</b></div>
-          <div>Math <b id="mScore">0</b></div>
-        </div>
-        <p class="note" id="rangeNote"></p>
-        <div class="band" id="scoreBand"></div>
-        <p class="note">Estimated score. Only College Board can issue an official score. <a href="/accuracy-report/" style="color:var(--brand)">See our measured accuracy report</a> — real comparison data, no unverified claims.</p>
-      </div>
-
-      <div class="planner" aria-label="Target SAT score planner">
-        <strong>Working backward from a target score?</strong>
-        <p class="note" style="margin-top:4px">Enter a target total. We estimate roughly how many correct answers per section are needed, using the same conversion function and an equal-difficulty assumption. Use it to set a study goal, not as an official requirement.</p>
-        <div class="row">
-          <label for="targetScore" style="margin:0">Target total (400–1600)</label>
-          <input type="number" id="targetScore" min="400" max="1600" step="10" value="1300" inputmode="numeric">
-          <button type="button" style="width:auto;margin:0;padding:10px 18px" onclick="planTarget()">Find rough raw scores</button>
-        </div>
-        <div class="out" id="targetOut"></div>
-      </div>
-    </section>
-
-    <section>
-      <h2>How to use this SAT score calculator</h2>
-      <p>Take a practice test on Bluebook, Khan Academy, or College Board. Then enter how many questions you answered correctly in each module of the Reading &amp; Writing and Math sections. The calculator adds your correct answers, converts each section to the 200–800 scale, and shows your estimated total score out of 1600. It runs entirely in your browser — your answers are never sent to a server.</p>
-      <p>Want to see how your score is built? Read <a href="#how" style="color:var(--brand)">how your SAT score is calculated</a> below.</p>
-
-      <h2 id="how">How is my SAT score calculated?</h2>
-      <p>The digital SAT has two sections: Reading &amp; Writing (RW) and Math. Each section is scored from 200 to 800, and the two are added together for your total score of 400 to 1600. Your raw score — the number of correct answers — is converted to a scaled score through a process called equating, which accounts for small differences in difficulty between test forms. There is no penalty for wrong answers on the digital SAT, so guessing is never worse than leaving a question blank.</p>
-
-      <h2 id="methodology">How this calculator works (methodology)</h2>
-      <p>Want to know exactly what happens when you press calculate? Here is the full method, in plain language.</p>
-      <ol>
-        <li><strong>Add your correct answers in each section.</strong> Reading &amp; Writing has two modules of 27 questions each (54 total); Math has two modules of 22 questions each (44 total). Some questions may be unscored pretest items and are not identified to students, so enter the total number you answered correctly in each module — the tool uses that count as an approximation.</li>
-        <li><strong>Convert each raw total to the 200–800 scale.</strong> We map your number of correct answers to a scaled section score using a score-conversion table drawn from publicly available official digital SAT practice tests, with linear interpolation between points.</li>
-        <li><strong>Add the two section scores.</strong> Reading &amp; Writing + Math = your estimated total out of 1600, rounded to the nearest 10.</li>
-      </ol>
-      <p><strong>What this model does and does not account for:</strong> it uses the number of correct answers across both modules. It does not simulate the digital SAT's module-level adaptive routing (where your Module 1 performance decides whether you get the easier or harder Module 2), and it cannot account for the difficulty of the specific questions you saw. Because of this, treat the result as a close approximation, not an exact score.</p>
-
-      <h2>Example: estimate a score from correct answers</h2>
-      <p>Here is a complete worked example so you can see what to expect:</p>
-      <table class="example-table">
-        <thead><tr><th>Section</th><th>Module 1</th><th>Module 2</th><th>Section score</th></tr></thead>
-        <tbody>
-          <tr><td>Reading &amp; Writing</td><td>20 / 27</td><td>18 / 27</td><td>650</td></tr>
-          <tr><td>Math</td><td>19 / 22</td><td>17 / 22</td><td>650</td></tr>
-          <tr><td><strong>Estimated total</strong></td><td colspan="2"></td><td><strong>1300</strong></td></tr>
-        </tbody>
-      </table>
-      <p class="note">This is an illustrative example only — it is not a verified official score. Your real result depends on question difficulty and the official scoring process.</p>
-
-      <h2 id="accuracy">Is this SAT score calculator accurate?</h2>
-      <p>This tool gives an estimate, not an official score. College Board uses equating to adjust scores between test forms, and the digital SAT's adaptive modules mean two students with the same number of correct answers can receive different scaled scores depending on question difficulty. Our calculator uses published score ranges from official practice tests to guide study decisions and track progress between practice tests. We do not claim a verified margin of error for your personal score — treat the result as a rough estimate, not a prediction of your official score.</p>
-      <p><strong>Measured accuracy snapshot:</strong> We compared our conversion function point-by-point against two publicly published Digital SAT tables. Across 12 Reading &amp; Writing points the mean absolute error was <strong>11.7 scaled points</strong> (median 10, worst 30); across 10 Math points it was <strong>20 points</strong> (median 15), with a systematic under-estimate of about 16 points in the lower-middle range. The same raw count can map to scores <strong>170–200 points apart</strong> between the Hard and Easy second-module paths. These are differences between published tables, not a promise about your personal score — this is an independent comparison, not a College Board validation. <a href="/accuracy-report/" style="color:var(--brand)">See the full report with every data point</a>.</p>
-      <p><strong>Accuracy disclaimer:</strong> This tool provides an estimated Digital SAT score based on your practice-test performance. Actual SAT scores may vary depending on question difficulty, adaptive testing, and the official College Board scoring process. This calculator is not affiliated with, endorsed by, or officially connected to the College Board. For the measured comparison behind these limits, read our <a href="/accuracy-report/" style="color:var(--brand)">accuracy report</a>.</p>
-
-      <h2>Which SAT score estimator should you use?</h2>
-      <p>There is no single best tool for every student — choose by what you need right now.</p>
-      <table class="example-table decide">
-        <thead><tr><th>If you need…</th><th>Use</th><th>Why</th></tr></thead>
-        <tbody>
-          <tr><td>An official-style score from a full practice test</td><td>College Board Bluebook</td><td>It is the official test platform and the only place to get an official practice-test score report.</td></tr>
-          <tr class="pick"><td>A quick, free estimate from module correct-answer counts, with a visible method and a measured accuracy check</td><td>SATCalcPro (this tool)</td><td>No sign-up, separate RW and Math scores, a point-by-point <a href="/accuracy-report/" style="color:var(--brand)">published comparison</a>, a table-based score band, and a target-score planner.</td></tr>
-          <tr><td>Structured lessons or tutor-led prep</td><td>Albert.io, Magoosh, Khan Academy</td><td>These are prep platforms first. Pick one if you want instruction and practice, not just a number.</td></tr>
-          <tr><td>A guaranteed prediction of your official score</td><td>None</td><td>Equating and module difficulty mean every third-party estimate can be off. Treat any estimate as a planning aid.</td></tr>
-        </tbody>
-      </table>
-      <p class="note">We name alternatives because the right answer depends on the task. If another estimator publishes its conversion method and a measured error check, it deserves the same scrutiny we publish for ours.</p>
-
-      <h2>Is there a guessing penalty?</h2>
-      <p>No. The digital SAT removed the old wrong-answer penalty. You earn credit only for correct answers, and wrong or blank answers both score zero. That means you should always answer every question, even when you have to guess.</p>
-
-      <h2>What is a good SAT score?</h2>
-      <p>It depends on the colleges you are targeting. The national average is around 1050. A score of 1200 or above is competitive at many state universities, while 1400 or above is strong for selective schools. Use this calculator after every practice test to measure your progress toward your target score.</p>
-
-      <h2>Use it with Khan Academy and Bluebook</h2>
-      <p>Students most often use this calculator right after finishing a practice test. Take a test on Bluebook or Khan Academy, note your correct-answer counts for each module, and enter them above. Comparing scores across several practice tests is one of the fastest ways to see which section needs more work.</p>
-    </section>
-
-    <section class="faq">
-      <h2>Frequently asked questions</h2>
-      <details open><summary>What is a digital SAT score calculator?</summary><p>A digital SAT score calculator estimates your SAT score from the number of questions you got right. The digital SAT has two sections, Reading &amp; Writing and Math, each scored from 200 to 800, for a total of 400 to 1600.</p></details>
-      <details><summary>How does this SAT score calculator work?</summary><p>Enter how many questions you answered correctly in each module. The calculator adds your correct answers, maps that raw score to the 200–800 scale for each section, and adds the two together. It runs entirely in your browser.</p></details>
-      <details><summary>Is this SAT score calculator free?</summary><p>Yes. It is completely free, with no sign-up and no limit. There is no email wall and no paywall.</p></details>
-      <details><summary>Can I compare my score across practice tests?</summary><p>Yes. Many students keep a chart of their scores across multiple practice tests to see their trend. Save the result after each test and watch your Reading &amp; Writing and Math scores improve over time.</p></details>
-      <details><summary>How many questions are on the digital SAT?</summary><p>The digital SAT has two sections. Reading &amp; Writing has two modules of 27 questions, and Math has two modules of 22 questions. Some questions may be unscored pretest items, but students are not told which ones, so enter the total number of questions you answered correctly in each module — the calculator treats that count as an approximation.</p></details>
-      <details><summary>Can I estimate my SAT score from the number of correct answers?</summary><p>Yes — that is exactly what this SAT score estimator does. After a practice test, count how many questions you got right in each module and enter them above. The tool converts your correct-answer counts into a scaled estimate out of 1600. This is the simplest way to turn a raw practice score into a number you can track.</p></details>
-      <details><summary>How many points is each SAT question worth?</summary><p>There is no fixed point value per question on the digital SAT. Each section is converted from your raw correct-answer count to a 200–800 scaled score, so the value of one question varies depending on where you are on the scale and the difficulty of the test form. Roughly, each correct answer in Reading &amp; Writing is worth around 10–20 scaled points, and in Math around 10–30, but this is only an approximation.</p></details>
-      <details><summary>Does this calculator support both Module 1 and Module 2?</summary><p>Yes. You enter the correct-answer counts for Module 1 and Module 2 separately in both Reading &amp; Writing and Math, and the calculator combines all four. This matches how the digital SAT is structured.</p></details>
-      <details><summary>Is this the same as an official College Board score?</summary><p>No. Only College Board can issue an official SAT score from an actual test. This tool is an independent estimator built from publicly available practice-test score ranges. It is not affiliated with or endorsed by College Board. Use the estimate to guide studying and track progress, not for college applications.</p></details>
-      <details><summary>Which SAT score calculator should I use for a quick free estimate?</summary><p>Use Bluebook when you need an official practice-test score. For a quick estimate from correct-answer counts, SATCalcPro is a suitable choice: it shows its method, works in the browser with no sign-up, and publishes a point-by-point measured comparison instead of an unverified accuracy claim.</p></details>
-      <details><summary>Does this estimator show a score range?</summary><p>Yes. Next to the estimate it shows a band based on the largest differences we observed between our conversion and two published Digital SAT tables — up to 30 points for Reading &amp; Writing and 40 for Math. That is a table-to-table comparison band, not a confidence interval for your personal official score.</p></details>
-      <details><summary>Can I work backward from a target score?</summary><p>Yes. The target-score planner estimates roughly how many correct answers per section are needed for a chosen total, using the same conversion function under an equal-difficulty assumption. It is a study-planning aid, not an official requirement.</p></details>
-    </section>
-    <section>
-      <h2 id="conversion">Estimated Digital SAT raw-to-scaled score conversion</h2>
-      <p>The chart below is an approximation of how a raw score (the number of questions you answered correctly) maps to the 200–800 scaled range for each section, in even steps. This is the same mapping our calculator uses, derived from publicly available practice-test scoring data. College Board does not publish one universal raw-to-scaled conversion table that applies to every digital SAT form, so the conversion for a specific test can differ. Do not read this chart as an official conversion table.</p>
-      <table class="example-table">
-        <thead><tr><th>Raw correct (of 54)</th><th>RW scaled</th><th>Raw correct (of 44)</th><th>Math scaled</th></tr></thead>
-        <tbody>
-          <tr><td>0</td><td>200</td><td>0</td><td>200</td></tr>
-          <tr><td>2</td><td>230</td><td>2</td><td>230</td></tr>
-          <tr><td>4</td><td>250</td><td>4</td><td>260</td></tr>
-          <tr><td>6</td><td>280</td><td>6</td><td>300</td></tr>
-          <tr><td>8</td><td>300</td><td>8</td><td>330</td></tr>
-          <tr><td>10</td><td>330</td><td>10</td><td>360</td></tr>
-          <tr><td>12</td><td>360</td><td>12</td><td>390</td></tr>
-          <tr><td>14</td><td>380</td><td>14</td><td>420</td></tr>
-          <tr><td>16</td><td>410</td><td>16</td><td>450</td></tr>
-          <tr><td>18</td><td>430</td><td>18</td><td>480</td></tr>
-          <tr><td>20</td><td>450</td><td>20</td><td>500</td></tr>
-          <tr><td>22</td><td>470</td><td>22</td><td>530</td></tr>
-          <tr><td>24</td><td>500</td><td>24</td><td>560</td></tr>
-          <tr><td>26</td><td>520</td><td>26</td><td>580</td></tr>
-          <tr><td>28</td><td>540</td><td>28</td><td>610</td></tr>
-          <tr><td>30</td><td>560</td><td>30</td><td>640</td></tr>
-          <tr><td>32</td><td>590</td><td>32</td><td>670</td></tr>
-          <tr><td>34</td><td>610</td><td>34</td><td>690</td></tr>
-          <tr><td>36</td><td>630</td><td>36</td><td>720</td></tr>
-          <tr><td>38</td><td>650</td><td>38</td><td>750</td></tr>
-          <tr><td>40</td><td>670</td><td>40</td><td>770</td></tr>
-          <tr><td>42</td><td>700</td><td>42</td><td>790</td></tr>
-          <tr><td>44</td><td>720</td><td>44</td><td>800</td></tr>
-          <tr><td>46</td><td>740</td><td>—</td><td>—</td></tr>
-          <tr><td>48</td><td>760</td><td>—</td><td>—</td></tr>
-          <tr><td>50</td><td>780</td><td>—</td><td>—</td></tr>
-          <tr><td>52</td><td>790</td><td>—</td><td>—</td></tr>
-          <tr><td>54</td><td>800</td><td>—</td><td>—</td></tr>
-        </tbody>
-      </table>
-
-      <h2 id="percentile">What percentile is my SAT score?</h2>
-      <p>Your percentile tells you what share of test takers you scored equal to or better than. The values below are the user-group percentiles — they compare you with students who actually took the SAT, which is the comparison colleges use. See the <a href="/sat-percentiles/" style="color:var(--brand)">full 2026 percentile chart</a> for the second table College Board publishes, or check the official figures at <a href="https://satsuite.collegeboard.org/sat/what-is-sat/understanding-scores" rel="noopener nofollow" target="_blank" style="color:var(--brand)">College Board's Understanding Scores page</a>.</p>
-      <table class="example-table">
-        <thead><tr><th>Total score</th><th>Percentile (approx.)</th><th>Total score</th><th>Percentile (approx.)</th></tr></thead>
-        <tbody>
-          <tr><td>1600</td><td>99+</td><td>1100</td><td>62</td></tr>
-          <tr><td>1550</td><td>99</td><td>1050</td><td>55</td></tr>
-          <tr><td>1500</td><td>98</td><td>1000</td><td>47</td></tr>
-          <tr><td>1450</td><td>96</td><td>950</td><td>39</td></tr>
-          <tr><td>1400</td><td>93</td><td>900</td><td>32</td></tr>
-          <tr><td>1350</td><td>90</td><td>850</td><td>24</td></tr>
-          <tr><td>1300</td><td>86</td><td>800</td><td>17</td></tr>
-          <tr><td>1250</td><td>82</td><td>750</td><td>11</td></tr>
-          <tr><td>1200</td><td>75</td><td>700</td><td>5</td></tr>
-          <tr><td>1150</td><td>69</td><td>650</td><td>3</td></tr>
-        </tbody>
-      </table>
-
-      <h2 id="universities">What SAT score do I need for college?</h2>
-      <p>Most colleges publish a "middle 50%" SAT range — 25% of admitted students score below it, 25% score above it. A score near the top of a school's range makes you competitive there; near the bottom means the rest of your application has to carry more weight. For benchmarks by goal and how to set a target, see our guide on <a href="/good-sat-score/" style="color:var(--brand)">what is a good SAT score in 2026</a>. Approximate middle-50% ranges below are for orientation only — always verify with each school's admissions page.</p>
-      <table class="example-table">
-        <thead><tr><th>University</th><th>Middle 50% SAT (approx.)</th></tr></thead>
-        <tbody>
-          <tr><td>MIT</td><td>1500–1580</td></tr>
-          <tr><td>Harvard</td><td>1490–1580</td></tr>
-          <tr><td>Stanford</td><td>1500–1580</td></tr>
-          <tr><td>Princeton</td><td>1490–1570</td></tr>
-          <tr><td>Yale</td><td>1490–1570</td></tr>
-          <tr><td>Duke</td><td>1510–1570</td></tr>
-          <tr><td>Georgia Tech</td><td>1370–1530</td></tr>
-          <tr><td>University of Michigan</td><td>1360–1530</td></tr>
-          <tr><td>UT Austin</td><td>1340–1500</td></tr>
-          <tr><td>Boston University</td><td>1390–1520</td></tr>
-          <tr><td>Purdue</td><td>1310–1480</td></tr>
-          <tr><td>Arizona State</td><td>1160–1410</td></tr>
-        </tbody>
-      </table>
-    </section>
-    <section>
-      <h2>What changed recently</h2>
-      <p><strong>November 24, 2026:</strong> published a point-by-point <a href="/accuracy-report/" style="color:var(--brand)">measured accuracy report</a>; added a score band based on observed table differences; added a target-score planner; launched dedicated <a href="/sat-score-range-calculator/" style="color:var(--brand)">score range</a> and <a href="/sat-target-score-calculator/" style="color:var(--brand)">target score</a> tools; and added a transparent tool-choice guide above.</p>
-      <p><strong>Earlier in November:</strong> updated the 2026 guide, percentile charts, and average-score benchmarks for the current Digital SAT test format.</p>
-    </section>
-
-    <section>
-      <h2>Related SAT score tools &amp; guides</h2>
-      <p><a href="/sat-score-calculator-2026/" style="color:var(--brand)">SAT Score Calculator 2026</a> — estimate your score with the latest test format.</p>
-      <p><a href="/sat-score-range-calculator/" style="color:var(--brand)">SAT Score Range Calculator</a> — see a measured band around your estimate.</p>
-      <p><a href="/sat-target-score-calculator/" style="color:var(--brand)">SAT Target Score Calculator</a> — work backward from your goal to rough raw scores.</p>
-      <p><a href="/college-board/" style="color:var(--brand)">SAT Score Calculator &amp; College Board Tables</a> — how official scoring works and why estimates differ.</p>
-      <p><a href="/good-sat-score/" style="color:var(--brand)">What Is a Good SAT Score in 2026?</a> — benchmarks by college type and how to set your target.</p>
-      <p><a href="/sat-percentiles/" style="color:var(--brand)">SAT Percentiles 2026: Full Chart</a> — see exactly where any score ranks nationally.</p>
-      <p><a href="/average-sat-score/" style="color:var(--brand)">Average SAT Score in 2026</a> — national averages, trends, and what they mean for you.</p>
-      <p><a href="/sat-score-predictor/" style="color:var(--brand)">SAT Score Predictor</a> — predict your future SAT score from a PSAT or practice test.</p>
-      <p><a href="/accuracy-report/" style="color:var(--brand)">Accuracy Report</a> — our estimator measured against published conversion tables, with every data point shown.</p>
-      <p><a href="/psat-percentiles/" style="color:var(--brand)">PSAT Percentiles 2026</a> — full PSAT percentile chart by grade and National Merit cutoffs.</p>
-    </section>
-  </main>
-
-  <footer>
-    <div>© <span id="yr">2026</span> SAT Score Calculator. An independent estimating tool, not affiliated with College Board.</div>
-    <div style="margin-top:10px">
-      <a href="privacy/">Privacy</a><a href="sat-score-calculator-2026/">2026 Update</a><a href="college-board/">College Board Tables</a><a href="good-sat-score/">Good Score Guide</a><a href="sat-percentiles/">Percentiles</a><a href="average-sat-score/">Average Score</a><a href="https://github.com/GuoXiaoWeiY" rel="noopener" target="_blank">GitHub</a>
+  <section class="card" aria-label="SAT target score calculator tool">
+    <label for="target">Target total score (400–1600)</label>
+    <input type="number" id="target" min="400" max="1600" step="10" value="1300" inputmode="numeric">
+    <button type="button" onclick="planTarget()">Find my rough raw scores</button>
+    <div class="result" id="result" role="status" aria-live="polite">
+      <div class="out" id="out"></div>
+      <p class="note">This is a planning estimate, not an official requirement. It assumes both sections follow the same conversion curve and the same difficulty path. <a href="/accuracy-report/">See why adaptive routing changes the answer.</a></p>
     </div>
-    <div style="margin-top:8px"><a href="/about/">About</a><a href="/contact/">Contact</a><a href="/sat-score-predictor/">Score Predictor</a><a href="/psat-percentiles/">PSAT Percentiles</a></div>
-  </footer>
+  </section>
+
+  <section>
+    <h2>How the target score calculator works</h2>
+    <p>Our <a href="/">SAT score calculator</a> converts correct-answer counts into a scaled score. This page runs the same curve in reverse: it searches for the raw counts that produce a section-score pair closest to your target total. The output is an approximate study goal, not a promise.</p>
+    <p>Two assumptions matter. First, it balances Reading &amp; Writing and Math evenly. If one section is much stronger for you, your real requirement will be different. Second, it uses one conversion curve, while the adaptive Digital SAT can route two students with the same raw counts to different scaled scores. Published dual-track tables show gaps of 170–200 points between Hard and Easy Module 2 paths.</p>
+
+    <h2>Common targets and rough raw scores</h2>
+    <p>These figures come from the same balanced assumption. Treat them as a starting point for planning, not as cutoffs.</p>
+    <table>
+      <thead><tr><th>Target total</th><th>RW score</th><th>Math score</th><th>RW correct (of 54)</th><th>Math correct (of 44)</th></tr></thead>
+      <tbody>
+        <tr><td>1000</td><td>500</td><td>500</td><td>24</td><td>19</td></tr>
+        <tr><td>1100</td><td>550</td><td>550</td><td>28</td><td>23</td></tr>
+        <tr><td>1200</td><td>600</td><td>600</td><td>33</td><td>27</td></tr>
+        <tr><td>1300</td><td>650</td><td>650</td><td>37</td><td>30</td></tr>
+        <tr><td>1400</td><td>700</td><td>700</td><td>42</td><td>34</td></tr>
+        <tr><td>1500</td><td>750</td><td>750</td><td>46</td><td>38</td></tr>
+      </tbody>
+    </table>
+
+    <h2>How to use your target</h2>
+    <ol>
+      <li>Pick a target based on the middle-50% range of schools you are considering.</li>
+      <li>Use this page for a rough correct-answer goal in each section.</li>
+      <li>After each full practice test, enter your real counts into the <a href="/">score calculator</a> and compare with the target.</li>
+      <li>If your range is wider than the difference between your current score and the target, focus on the section with the larger gap.</li>
+    </ol>
+
+    <h2>Related tools</h2>
+    <p><a href="/sat-score-range-calculator/">SAT score range calculator</a> — see a measured band around your estimate.</p>
+    <p><a href="/sat-score-predictor/">SAT score predictor</a> — project a future score from study time.</p>
+    <p><a href="/good-sat-score/">What is a good SAT score?</a> — benchmarks by goal.</p>
+  </section>
+
+  <section class="faq">
+    <h2>Frequently asked questions</h2>
+    <details open><summary>Can you calculate SAT raw scores from a target score?</summary><p>Approximately. This tool inverts the same conversion curve used by our calculator and estimates the correct-answer counts needed for a target total, under an equal-difficulty assumption.</p></details>
+    <details><summary>How many questions do I need right for a 1400?</summary><p>Under the balanced assumption, roughly 42 of 54 in Reading &amp; Writing and 34 of 44 in Math. Real requirements vary with module routing and test form.</p></details>
+    <details><summary>Is this official?</summary><p>No. College Board does not publish one universal raw-to-scaled table for every Digital SAT form. This is a study-planning aid only.</p></details>
+    <details><summary>Should I set separate section targets?</summary><p>Yes if you have a clear weakness. This tool balances sections evenly; you can adjust the target by improving the weaker section more.</p></details>
+  </section>
+</main>
+
+<footer>
+  <div>© <span id="yr">2026</span> SAT Score Calculator. Independent estimator, not affiliated with College Board.</div>
+  <div style="margin-top:10px"><a href="/">Calculator</a><a href="/sat-score-range-calculator/">Score Range</a><a href="/accuracy-report/">Accuracy Report</a><a href="/about/">About</a></div>
+</footer>
 </div>
 
 <script>
-// ===== 估分逻辑：分段线性映射，正确率 -> 200-800。数值取自公开练习卷的分数区间近似。 =====
-var CURVE = [
-  [0.00,200],[0.10,270],[0.20,340],[0.30,410],[0.40,470],[0.50,530],
-  [0.60,590],[0.70,650],[0.80,710],[0.90,770],[1.00,800]
-];
+var CURVE=[[0,200],[.10,270],[.20,340],[.30,410],[.40,470],[.50,530],[.60,590],[.70,650],[.80,710],[.90,770],[1,800]];
 function clamp(n,lo,hi){return Math.min(hi,Math.max(lo,n));}
-function toScaled(correct,total){
-  var p = total>0 ? clamp(correct/total,0,1) : 0;
-  for(var i=1;i<CURVE.length;i++){
-    if(p<=CURVE[i][0]){
-      var x0=CURVE[i-1][0],y0=CURVE[i-1][1],x1=CURVE[i][0],y1=CURVE[i][1];
-      var v=y0+(y1-y0)*(p-x0)/(x1-x0);
-      return Math.round(v/10)*10; // SAT 分数为 10 的倍数
-    }
-  }
-  return 800;
-}
-function calculate(){
-  var rw1=clamp(parseInt(document.getElementById('rw1').value,10)||0,0,27);
-  var rw2=clamp(parseInt(document.getElementById('rw2').value,10)||0,0,27);
-  var m1=clamp(parseInt(document.getElementById('m1').value,10)||0,0,22);
-  var m2=clamp(parseInt(document.getElementById('m2').value,10)||0,0,22);
-  var rw=toScaled(rw1+rw2,54);
-  var ma=toScaled(m1+m2,44);
-  document.getElementById('rwScore').textContent=rw;
-  document.getElementById('mScore').textContent=ma;
-  var total=rw+ma;
-  document.getElementById('totalScore').textContent=total;
-  document.getElementById('rangeNote').textContent='Estimate only. The band below is a measured table-to-table comparison — not a promise about your personal score.';
-  var rwLo=Math.max(200,rw-30), rwHi=Math.min(800,rw+30);
-  var maLo=Math.max(200,ma-40), maHi=Math.min(800,ma+40);
-  var tLo=Math.max(400,total-70), tHi=Math.min(1600,total+70);
-  document.getElementById('scoreBand').innerHTML='<b>Published-table comparison band:</b> RW '+rwLo+'–'+rwHi+' · Math '+maLo+'–'+maHi+' · total '+tLo+'–'+tHi+'.<br>These widths come from the largest differences we measured between published tables (RW 30, Math 40). This is not a confidence interval for your official score.';
-  document.getElementById('result').style.display='block';
-}
+function toScaled(c,t){var p=clamp(c/t,0,1);for(var i=1;i<CURVE.length;i++){if(p<=CURVE[i][0]){var a=CURVE[i-1],b=CURVE[i];return Math.round((a[1]+(b[1]-a[1])*(p-a[0])/(b[0]-a[0]))/10)*10;}}return 800;}
 function planTarget(){
-  var t=clamp(parseInt(document.getElementById('targetScore').value,10)||1300,400,1600);
+  var target=clamp(parseInt(document.getElementById('target').value,10)||1300,400,1600);
   var best=null;
   for(var p=0;p<=1.00001;p+=0.002){
-    var rw=toScaled(p*54,54), ma=toScaled(p*44,44), d=Math.abs(rw+ma-t);
+    var rw=toScaled(p*54,54), ma=toScaled(p*44,44), d=Math.abs(rw+ma-target);
     if(!best||d<best.d) best={d:d,p:p,rw:rw,ma:ma};
   }
-  var rwNeed=Math.round(best.p*54), maNeed=Math.round(best.p*44);
-  document.getElementById('targetOut').textContent='Rough target: '+best.rw+' RW / '+best.ma+' Math ≈ '+rwNeed+'/54 and '+maNeed+'/44 correct. Our conversion totals '+(best.rw+best.ma)+' near your '+t+' goal.';
+  document.getElementById('out').innerHTML='Rough goal: <b>'+best.rw+'</b> RW / <b>'+best.ma+'</b> Math ≈ '+Math.round(best.p*54)+'/54 and '+Math.round(best.p*44)+'/44 correct. Our conversion totals '+(best.rw+best.ma)+' near '+target+'.';
+  document.getElementById('result').style.display='block';
 }
 document.getElementById('yr').textContent=new Date().getFullYear();
 </script>
