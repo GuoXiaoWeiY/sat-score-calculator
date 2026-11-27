@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAT Score Calculator — Free Estimator with Published Accuracy Data</title>
-<meta name="description" content="Free digital SAT score estimator. Enter module correct-answer counts for a 400-1600 estimate, see a measured accuracy comparison, and work backward from a target score. No signup.">
+<title>Digital SAT Score Calculator (2026) – Module 1 &amp; 2 Estimator</title>
+<meta name="description" content="Estimate your 400–1600 Digital SAT score from RW &amp; Math Module 1 and Module 2 raw scores. Includes score bands, accuracy benchmarks, and free instant results.">
 <link rel="canonical" href="https://satcalcpro.dpdns.org/">
 <meta property="og:title" content="Free SAT Score Calculator">
 <meta property="og:description" content="Estimate your Digital SAT score out of 1600. Free, instant, no sign-up.">
@@ -212,6 +212,30 @@
         <p class="note">Estimated score. Only College Board can issue an official score. <a href="/accuracy-report/" style="color:var(--brand)">See our measured accuracy report</a> — real comparison data, no unverified claims.</p>
       </div>
 
+      <div id="dynamic-next-steps" class="next-steps-box" style="display:none;margin-top: 16px; padding: 14px 16px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0;">
+        <p id="score-band-insight" style="margin: 0 0 10px 0; font-weight: 600; color: #0f172a;">
+          <!-- JS 根据分数段动态填充诊断提示 -->
+        </p>
+        <ul style="margin: 0; padding-left: 18px; line-height: 1.6; color: #334155;">
+          <li>
+            <strong>Planning a higher goal?</strong> Use the
+            <a href="/sat-target-score-calculator/">SAT Target Score Calculator</a>
+            to see how many extra questions you need for 1400+ or 1500+.
+          </li>
+          <li>
+            <strong>Worried about Module 2 difficulty?</strong> Check the
+            <a href="/sat-score-range-calculator/">SAT Score Range Calculator</a>
+            to model Hard vs. Easy module routing variance (up to 170–200 pts).
+          </li>
+          <li>
+            <strong>See where you stand:</strong> Compare your result against
+            <a href="/sat-percentiles/">2026 SAT Percentiles</a>,
+            <a href="/good-sat-score/">Good SAT Score Benchmarks</a>, or our
+            <a href="/accuracy-report/">Empirical Accuracy Report</a>.
+          </li>
+        </ul>
+      </div>
+
       <div class="planner" aria-label="Target SAT score planner">
         <strong>Working backward from a target score?</strong>
         <p class="note" style="margin-top:4px">Enter a target total. We estimate roughly how many correct answers per section are needed, using the same conversion function and an equal-difficulty assumption. Use it to set a study goal, not as an official requirement.</p>
@@ -240,6 +264,23 @@
         <li><strong>Add the two section scores.</strong> Reading &amp; Writing + Math = your estimated total out of 1600, rounded to the nearest 10.</li>
       </ol>
       <p><strong>What this model does and does not account for:</strong> it uses the number of correct answers across both modules. It does not simulate the digital SAT's module-level adaptive routing (where your Module 1 performance decides whether you get the easier or harder Module 2), and it cannot account for the difficulty of the specific questions you saw. Because of this, treat the result as a close approximation, not an exact score.</p>
+
+      <section class="bluebook-routing-guide">
+        <h2>How to Use This Calculator with College Board Bluebook Practice Tests</h2>
+        <p>
+          When reviewing your official <strong>Bluebook Practice Tests</strong>, count your total correct answers separately for <strong>Module 1</strong> and <strong>Module 2</strong> in both Reading &amp; Writing (out of 27 per module) and Math (out of 22 per module). Enter those four raw counts above to cross-check your scaled score band.
+        </p>
+
+        <h3>Why Module 1 Accuracy Controls Your Score Ceiling (Routing Threshold)</h3>
+        <p>
+          Because the Digital SAT is section-adaptive, your performance in <strong>Module 1</strong> determines whether you are routed to the <strong>Hard Module 2</strong> or the <strong>Easy Module 2</strong>:
+        </p>
+        <ul>
+          <li><strong>Reading &amp; Writing (27 questions/module):</strong> Missing roughly <strong>9–11+ questions</strong> in Module 1 typically routes you to the easier second module, capping your section score around <strong>560–610</strong> even if you ace Module 2.</li>
+          <li><strong>Math (22 questions/module):</strong> Missing roughly <strong>7–9+ questions</strong> in Module 1 generally triggers the easier second module, creating up to a <strong>170–200 point gap</strong> compared to the same raw total on the Hard path.</li>
+          <li><strong>Why estimates vary by ±20–40 points:</strong> College Board uses Item Response Theory (IRT) weighting rather than a flat 1-point-per-question curve, meaning harder operational questions carry different weight than easier ones.</li>
+        </ul>
+      </section>
 
       <h2>Example: estimate a score from correct answers</h2>
       <p>Here is a complete worked example so you can see what to expect:</p>
@@ -419,6 +460,21 @@ function toScaled(correct,total){
   }
   return 800;
 }
+function updateScoreInsights(totalScore) {
+  var insightEl = document.getElementById('score-band-insight');
+  var box = document.getElementById('dynamic-next-steps');
+  if (!insightEl || !box) return;
+  if (totalScore >= 1450) {
+    insightEl.textContent = 'Strong competitive range (' + totalScore + '/1600): You are likely routing into the Hard Module 2 on both sections. Small careless errors in the last 5–6 questions account for most point drops here.';
+  } else if (totalScore >= 1250) {
+    insightEl.textContent = 'Solid above-average range (' + totalScore + '/1600): Securing at least ~65–70% accuracy in Module 1 is critical to unlock the Hard Module 2 ceiling.';
+  } else if (totalScore >= 1000) {
+    insightEl.textContent = 'Core foundation range (' + totalScore + '/1600): Improving Module 1 accuracy by just 4–5 questions can unlock the harder second module and add 80–120+ points.';
+  } else {
+    insightEl.textContent = 'Building baseline (' + totalScore + '/1600): Focus first on Module 1 pacing and high-frequency grammar/algebra rules before worrying about harder Module 2 items.';
+  }
+  box.style.display = 'block';
+}
 function calculate(){
   var rw1=clamp(parseInt(document.getElementById('rw1').value,10)||0,0,27);
   var rw2=clamp(parseInt(document.getElementById('rw2').value,10)||0,0,27);
@@ -430,6 +486,7 @@ function calculate(){
   document.getElementById('mScore').textContent=ma;
   var total=rw+ma;
   document.getElementById('totalScore').textContent=total;
+  updateScoreInsights(total);
   document.getElementById('rangeNote').textContent='Estimate only. The band below is a measured table-to-table comparison — not a promise about your personal score.';
   var rwLo=Math.max(200,rw-30), rwHi=Math.min(800,rw+30);
   var maLo=Math.max(200,ma-40), maHi=Math.min(800,ma+40);
