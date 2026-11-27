@@ -167,6 +167,13 @@
   .planner input[type=number]{width:130px}
   .planner .out{margin-top:10px;font-weight:600;color:var(--brand)}
   @media(max-width:520px){.planner .row{align-items:stretch}.planner input[type=number]{width:100%}}
+  .presets{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 16px}
+  .presets button{width:auto;padding:7px 13px;font-size:.82rem;font-weight:600;margin:0;background:#eef4ff;color:var(--brand);border:1px solid #cfe0ff;border-radius:999px}
+  .presets button:hover{background:#dfeaff}
+  .presets .lbl{font-size:.82rem;color:var(--sub);align-self:center;margin-right:2px}
+  .copy-btn{width:auto;max-width:100%;margin:14px auto 0;padding:10px 18px;font-size:.92rem;background:#fff;color:var(--brand);border:1px solid var(--brand)}
+  .copy-btn:hover{background:#eef4ff}
+  .copy-msg{font-size:.8rem;color:var(--brand);min-height:1.2em;margin-top:6px}
 </style>
   <link rel="stylesheet" href="/style.css">
 </head>
@@ -181,6 +188,12 @@
 
     <!-- 首屏工具：文案与表单全部写死在 HTML 源码里，服务端渲染即可见 -->
     <section class="card" aria-label="SAT score calculator tool">
+      <div class="presets" role="group" aria-label="Sample score scenarios">
+        <span class="lbl">Try a sample:</span>
+        <button type="button" onclick="applyPreset(25,22,21,18)">1500+ Pace</button>
+        <button type="button" onclick="applyPreset(20,18,16,15)">1300 Solid</button>
+        <button type="button" onclick="applyPreset(12,22,10,20)">Hard vs. Easy Trap</button>
+      </div>
       <form id="calcForm" onsubmit="return false;">
         <fieldset>
           <legend>Reading &amp; Writing</legend>
@@ -210,6 +223,8 @@
         <p class="note" id="rangeNote"></p>
         <div class="band" id="scoreBand"></div>
         <p class="note">Estimated score. Only College Board can issue an official score. <a href="/accuracy-report/" style="color:var(--brand)">See our measured accuracy report</a> — real comparison data, no unverified claims.</p>
+        <button type="button" class="copy-btn" id="copyBreakdown" onclick="copyBreakdown()">Copy Breakdown for Reddit / Discord</button>
+        <div class="copy-msg" id="copyMsg" role="status" aria-live="polite"></div>
       </div>
 
       <div id="dynamic-next-steps" class="next-steps-box" style="display:none;margin-top: 16px; padding: 14px 16px; border-radius: 8px; background: #f8fafc; border: 1px solid #e2e8f0;">
@@ -460,6 +475,31 @@ function toScaled(correct,total){
   }
   return 800;
 }
+// 最近一次算分结果，供复制成绩单使用
+var lastBreakdown=null;
+function applyPreset(rw1,rw2,m1,m2){
+  document.getElementById('rw1').value=rw1;
+  document.getElementById('rw2').value=rw2;
+  document.getElementById('m1').value=m1;
+  document.getElementById('m2').value=m2;
+  calculate();
+}
+function copyBreakdown(){
+  var msg=document.getElementById('copyMsg');
+  if(!lastBreakdown){msg.textContent='Calculate your score first.';return;}
+  var text=lastBreakdown;
+  var done=function(){msg.textContent='Copied — paste it into Reddit or Discord.';};
+  var fail=function(){msg.textContent='Copy blocked by browser — select the text manually.';};
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done).catch(function(){
+      var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+      try{document.execCommand('copy')?done():fail();}catch(e){fail();}document.body.removeChild(ta);
+    });
+  }else{
+    var ta=document.createElement('textarea');ta.value=text;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();
+    try{document.execCommand('copy')?done():fail();}catch(e){fail();}document.body.removeChild(ta);
+  }
+}
 function updateScoreInsights(totalScore) {
   var insightEl = document.getElementById('score-band-insight');
   var box = document.getElementById('dynamic-next-steps');
@@ -492,6 +532,10 @@ function calculate(){
   var maLo=Math.max(200,ma-40), maHi=Math.min(800,ma+40);
   var tLo=Math.max(400,total-70), tHi=Math.min(1600,total+70);
   document.getElementById('scoreBand').innerHTML='<b>Published-table comparison band:</b> RW '+rwLo+'–'+rwHi+' · Math '+maLo+'–'+maHi+' · total '+tLo+'–'+tHi+'.<br>These widths come from the largest differences we measured between published tables (RW 30, Math 40). This is not a confidence interval for your official score.';
+  lastBreakdown='Digital SAT Estimate: '+total+' (Range: '+tLo+'–'+tHi+')\n'
+    +'• RW: M1 '+rw1+'/27, M2 '+rw2+'/27 (~'+rw+')\n'
+    +'• Math: M1 '+m1+'/22, M2 '+m2+'/22 (~'+ma+')\n'
+    +'Estimated via SATCalcPro (satcalcpro.dpdns.org)';
   document.getElementById('result').style.display='block';
 }
 function planTarget(){
